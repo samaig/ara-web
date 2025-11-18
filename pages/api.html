@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Reference - Araviel</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 5L35 15V25L20 35L5 25V15L20 5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <circle cx="20" cy="20" r="4" fill="currentColor"/>
+                </svg>
+                <span class="logo-text">Araviel</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="docs.html">Docs</a>
+                <a href="support.html">Support</a>
+                <a href="../index.html#waitlist" class="btn btn-nav">Join Waitlist</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="api-page">
+        <div class="container">
+            <div class="api-header">
+                <h1>API Reference</h1>
+                <p class="subtitle">Build AI-powered applications with Araviel's REST API</p>
+                <p class="version">Version 1.0 | Updated November 2025</p>
+            </div>
+
+            <div class="api-content">
+                <!-- Getting Started -->
+                <section class="api-section">
+                    <h2>Getting Started</h2>
+
+                    <h3>Authentication</h3>
+                    <p>All API requests require authentication using an API key. Include your API key in the request header:</p>
+                    <div class="code-block">
+                        <pre><code>Authorization: Bearer YOUR_API_KEY</code></pre>
+                    </div>
+
+                    <h3>Get Your API Key</h3>
+                    <ol>
+                        <li>Log in to your Araviel account</li>
+                        <li>Navigate to Settings → API</li>
+                        <li>Click "Generate New API Key"</li>
+                        <li>Copy and securely store your key (it won't be shown again)</li>
+                    </ol>
+                    <p><strong>Note:</strong> API access requires a Pro or Team plan.</p>
+
+                    <h3>Base URL</h3>
+                    <div class="code-block">
+                        <pre><code>https://api.araviel.ai/v1</code></pre>
+                    </div>
+
+                    <h3>Rate Limits</h3>
+                    <ul>
+                        <li><strong>Pro Plan:</strong> 10,000 requests/month (100 requests/minute)</li>
+                        <li><strong>Team Plan:</strong> 50,000 requests/month (200 requests/minute)</li>
+                        <li><strong>Enterprise:</strong> Custom limits (contact sales)</li>
+                    </ul>
+                    <p>Rate limit headers are included in every response:</p>
+                    <div class="code-block">
+                        <pre><code>X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 95
+X-RateLimit-Reset: 1698765432</code></pre>
+                    </div>
+                </section>
+
+                <!-- Chat Completions -->
+                <section class="api-section">
+                    <h2>Chat Completions</h2>
+                    <p class="endpoint"><span class="method post">POST</span> <code>/chat/completions</code></p>
+                    <p>Create a chat completion with automatic model routing via ADE.</p>
+
+                    <h3>Request Body</h3>
+                    <div class="code-block">
+                        <pre><code>{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Write a Python function to calculate fibonacci numbers"
+    }
+  ],
+  "temperature": 0.7,
+  "max_tokens": 1000,
+  "stream": false
+}</code></pre>
+                    </div>
+
+                    <h3>Parameters</h3>
+                    <table class="params-table">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>messages</code></td>
+                                <td>array</td>
+                                <td>Yes</td>
+                                <td>Array of message objects with <code>role</code> and <code>content</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>temperature</code></td>
+                                <td>number</td>
+                                <td>No</td>
+                                <td>Sampling temperature (0-2). Default: 0.7</td>
+                            </tr>
+                            <tr>
+                                <td><code>max_tokens</code></td>
+                                <td>integer</td>
+                                <td>No</td>
+                                <td>Maximum tokens to generate. Default: 1000</td>
+                            </tr>
+                            <tr>
+                                <td><code>stream</code></td>
+                                <td>boolean</td>
+                                <td>No</td>
+                                <td>Enable streaming responses. Default: false</td>
+                            </tr>
+                            <tr>
+                                <td><code>model</code></td>
+                                <td>string</td>
+                                <td>No</td>
+                                <td>Override ADE and specify a model. Default: auto</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Response</h3>
+                    <div class="code-block">
+                        <pre><code>{
+  "id": "chatcmpl-abc123",
+  "object": "chat.completion",
+  "created": 1698765432,
+  "model": "gpt-4",
+  "routed_by": "ade",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Here's a Python function to calculate Fibonacci numbers:\n\n```python\ndef fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n```"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 15,
+    "completion_tokens": 58,
+    "total_tokens": 73
+  }
+}</code></pre>
+                    </div>
+
+                    <h3>Example: cURL</h3>
+                    <div class="code-block">
+                        <pre><code>curl https://api.araviel.ai/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -d '{
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain quantum computing in simple terms"
+      }
+    ]
+  }'</code></pre>
+                    </div>
+
+                    <h3>Example: Python</h3>
+                    <div class="code-block">
+                        <pre><code>import requests
+
+api_key = "YOUR_API_KEY"
+url = "https://api.araviel.ai/v1/chat/completions"
+
+headers = {
+    "Authorization": f"Bearer {api_key}",
+    "Content-Type": "application/json"
+}
+
+data = {
+    "messages": [
+        {"role": "user", "content": "Explain quantum computing"}
+    ],
+    "temperature": 0.7
+}
+
+response = requests.post(url, headers=headers, json=data)
+result = response.json()
+
+print(result["choices"][0]["message"]["content"])</code></pre>
+                    </div>
+
+                    <h3>Example: JavaScript (Node.js)</h3>
+                    <div class="code-block">
+                        <pre><code>const axios = require('axios');
+
+const apiKey = 'YOUR_API_KEY';
+const url = 'https://api.araviel.ai/v1/chat/completions';
+
+const data = {
+  messages: [
+    { role: 'user', content: 'Explain quantum computing' }
+  ],
+  temperature: 0.7
+};
+
+axios.post(url, data, {
+  headers: {
+    'Authorization': `Bearer ${apiKey}`,
+    'Content-Type': 'application/json'
+  }
+})
+.then(response => {
+  console.log(response.data.choices[0].message.content);
+})
+.catch(error => {
+  console.error('Error:', error.response.data);
+});</code></pre>
+                    </div>
+                </section>
+
+                <!-- Models -->
+                <section class="api-section">
+                    <h2>Models</h2>
+                    <p class="endpoint"><span class="method get">GET</span> <code>/models</code></p>
+                    <p>List all available AI models and their current status.</p>
+
+                    <h3>Response</h3>
+                    <div class="code-block">
+                        <pre><code>{
+  "object": "list",
+  "data": [
+    {
+      "id": "gpt-4",
+      "provider": "openai",
+      "status": "active",
+      "capabilities": ["chat", "code", "analysis"],
+      "context_window": 8192,
+      "pricing": {
+        "input": 0.03,
+        "output": 0.06
+      }
+    },
+    {
+      "id": "claude-3-opus",
+      "provider": "anthropic",
+      "status": "active",
+      "capabilities": ["chat", "writing", "analysis"],
+      "context_window": 200000,
+      "pricing": {
+        "input": 0.015,
+        "output": 0.075
+      }
+    }
+  ]
+}</code></pre>
+                    </div>
+
+                    <h3>Example: cURL</h3>
+                    <div class="code-block">
+                        <pre><code>curl https://api.araviel.ai/v1/models \
+  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+                    </div>
+                </section>
+
+                <!-- Conversations -->
+                <section class="api-section">
+                    <h2>Conversations</h2>
+
+                    <h3>List Conversations</h3>
+                    <p class="endpoint"><span class="method get">GET</span> <code>/conversations</code></p>
+                    <p>Retrieve all conversations for the authenticated user.</p>
+
+                    <h4>Query Parameters</h4>
+                    <table class="params-table">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>limit</code></td>
+                                <td>integer</td>
+                                <td>Number of conversations to return (1-100). Default: 20</td>
+                            </tr>
+                            <tr>
+                                <td><code>offset</code></td>
+                                <td>integer</td>
+                                <td>Pagination offset. Default: 0</td>
+                            </tr>
+                            <tr>
+                                <td><code>sort</code></td>
+                                <td>string</td>
+                                <td>Sort order: <code>created_asc</code>, <code>created_desc</code>. Default: created_desc</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Response</h4>
+                    <div class="code-block">
+                        <pre><code>{
+  "object": "list",
+  "data": [
+    {
+      "id": "conv_abc123",
+      "created_at": 1698765432,
+      "updated_at": 1698765500,
+      "title": "Python Fibonacci Function",
+      "message_count": 4,
+      "models_used": ["gpt-4", "claude-3-sonnet"]
+    }
+  ],
+  "has_more": false,
+  "total": 1
+}</code></pre>
+                    </div>
+
+                    <h3>Get Conversation</h3>
+                    <p class="endpoint"><span class="method get">GET</span> <code>/conversations/{id}</code></p>
+                    <p>Retrieve a specific conversation with all messages.</p>
+
+                    <h4>Response</h4>
+                    <div class="code-block">
+                        <pre><code>{
+  "id": "conv_abc123",
+  "created_at": 1698765432,
+  "updated_at": 1698765500,
+  "title": "Python Fibonacci Function",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Write a Python function for fibonacci",
+      "timestamp": 1698765432
+    },
+    {
+      "role": "assistant",
+      "content": "Here's a Python function...",
+      "model": "gpt-4",
+      "timestamp": 1698765440
+    }
+  ]
+}</code></pre>
+                    </div>
+
+                    <h3>Delete Conversation</h3>
+                    <p class="endpoint"><span class="method delete">DELETE</span> <code>/conversations/{id}</code></p>
+                    <p>Delete a conversation permanently.</p>
+
+                    <h4>Response</h4>
+                    <div class="code-block">
+                        <pre><code>{
+  "id": "conv_abc123",
+  "deleted": true
+}</code></pre>
+                    </div>
+                </section>
+
+                <!-- Usage Statistics -->
+                <section class="api-section">
+                    <h2>Usage Statistics</h2>
+                    <p class="endpoint"><span class="method get">GET</span> <code>/usage</code></p>
+                    <p>Get usage statistics for your account.</p>
+
+                    <h3>Query Parameters</h3>
+                    <table class="params-table">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>start_date</code></td>
+                                <td>string</td>
+                                <td>ISO 8601 date. Default: 30 days ago</td>
+                            </tr>
+                            <tr>
+                                <td><code>end_date</code></td>
+                                <td>string</td>
+                                <td>ISO 8601 date. Default: today</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Response</h3>
+                    <div class="code-block">
+                        <pre><code>{
+  "period": {
+    "start": "2025-10-18",
+    "end": "2025-11-18"
+  },
+  "requests": {
+    "total": 1543,
+    "successful": 1521,
+    "failed": 22
+  },
+  "tokens": {
+    "prompt_tokens": 45234,
+    "completion_tokens": 89456,
+    "total_tokens": 134690
+  },
+  "models_used": {
+    "gpt-4": 678,
+    "claude-3-opus": 432,
+    "gemini-pro": 289,
+    "other": 144
+  },
+  "cost_usd": 12.45
+}</code></pre>
+                    </div>
+                </section>
+
+                <!-- Streaming -->
+                <section class="api-section">
+                    <h2>Streaming Responses</h2>
+                    <p>Enable real-time streaming for chat completions using Server-Sent Events (SSE).</p>
+
+                    <h3>Request</h3>
+                    <div class="code-block">
+                        <pre><code>{
+  "messages": [
+    {"role": "user", "content": "Explain AI"}
+  ],
+  "stream": true
+}</code></pre>
+                    </div>
+
+                    <h3>Response Stream</h3>
+                    <div class="code-block">
+                        <pre><code>data: {"id":"chatcmpl-abc","choices":[{"delta":{"content":"AI"}}]}
+
+data: {"id":"chatcmpl-abc","choices":[{"delta":{"content":" stands"}}]}
+
+data: {"id":"chatcmpl-abc","choices":[{"delta":{"content":" for"}}]}
+
+data: [DONE]</code></pre>
+                    </div>
+
+                    <h3>Example: Python</h3>
+                    <div class="code-block">
+                        <pre><code>import requests
+import json
+
+response = requests.post(
+    "https://api.araviel.ai/v1/chat/completions",
+    headers={"Authorization": f"Bearer {api_key}"},
+    json={"messages": [{"role": "user", "content": "Hello"}], "stream": True},
+    stream=True
+)
+
+for line in response.iter_lines():
+    if line:
+        if line.startswith(b'data: '):
+            data = line[6:]
+            if data == b'[DONE]':
+                break
+            chunk = json.loads(data)
+            content = chunk['choices'][0]['delta'].get('content', '')
+            print(content, end='', flush=True)</code></pre>
+                    </div>
+                </section>
+
+                <!-- Error Codes -->
+                <section class="api-section">
+                    <h2>Error Codes</h2>
+                    <p>The API uses standard HTTP status codes and returns error details in JSON format.</p>
+
+                    <h3>Error Response Format</h3>
+                    <div class="code-block">
+                        <pre><code>{
+  "error": {
+    "code": "invalid_request",
+    "message": "Missing required parameter: messages",
+    "type": "invalid_request_error"
+  }
+}</code></pre>
+                    </div>
+
+                    <h3>HTTP Status Codes</h3>
+                    <table class="params-table">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Meaning</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>200</code></td>
+                                <td>OK</td>
+                                <td>Request succeeded</td>
+                            </tr>
+                            <tr>
+                                <td><code>400</code></td>
+                                <td>Bad Request</td>
+                                <td>Invalid request parameters</td>
+                            </tr>
+                            <tr>
+                                <td><code>401</code></td>
+                                <td>Unauthorized</td>
+                                <td>Invalid or missing API key</td>
+                            </tr>
+                            <tr>
+                                <td><code>403</code></td>
+                                <td>Forbidden</td>
+                                <td>API key doesn't have required permissions</td>
+                            </tr>
+                            <tr>
+                                <td><code>404</code></td>
+                                <td>Not Found</td>
+                                <td>Resource doesn't exist</td>
+                            </tr>
+                            <tr>
+                                <td><code>429</code></td>
+                                <td>Too Many Requests</td>
+                                <td>Rate limit exceeded</td>
+                            </tr>
+                            <tr>
+                                <td><code>500</code></td>
+                                <td>Internal Server Error</td>
+                                <td>Server error - contact support</td>
+                            </tr>
+                            <tr>
+                                <td><code>503</code></td>
+                                <td>Service Unavailable</td>
+                                <td>Service temporarily unavailable</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Error Types</h3>
+                    <ul>
+                        <li><code>invalid_request_error</code> - Malformed request</li>
+                        <li><code>authentication_error</code> - Invalid API key</li>
+                        <li><code>permission_error</code> - Insufficient permissions</li>
+                        <li><code>rate_limit_error</code> - Too many requests</li>
+                        <li><code>model_error</code> - Model unavailable or failed</li>
+                        <li><code>server_error</code> - Internal server error</li>
+                    </ul>
+                </section>
+
+                <!-- SDKs -->
+                <section class="api-section">
+                    <h2>Official SDKs</h2>
+                    <p>We provide official SDKs to make integration easier:</p>
+
+                    <h3>Python SDK</h3>
+                    <div class="code-block">
+                        <pre><code>pip install araviel</code></pre>
+                    </div>
+                    <div class="code-block">
+                        <pre><code>from araviel import Araviel
+
+client = Araviel(api_key="YOUR_API_KEY")
+
+response = client.chat.completions.create(
+    messages=[
+        {"role": "user", "content": "Hello, world!"}
+    ]
+)
+
+print(response.choices[0].message.content)</code></pre>
+                    </div>
+
+                    <h3>JavaScript SDK</h3>
+                    <div class="code-block">
+                        <pre><code>npm install @araviel/sdk</code></pre>
+                    </div>
+                    <div class="code-block">
+                        <pre><code>import Araviel from '@araviel/sdk';
+
+const client = new Araviel({ apiKey: 'YOUR_API_KEY' });
+
+const response = await client.chat.completions.create({
+  messages: [{ role: 'user', content: 'Hello, world!' }]
+});
+
+console.log(response.choices[0].message.content);</code></pre>
+                    </div>
+
+                    <h3>Community SDKs</h3>
+                    <ul>
+                        <li><strong>Ruby:</strong> <code>gem install araviel-ruby</code></li>
+                        <li><strong>Go:</strong> <code>go get github.com/araviel/araviel-go</code></li>
+                        <li><strong>PHP:</strong> <code>composer require araviel/araviel-php</code></li>
+                    </ul>
+                </section>
+
+                <!-- Support -->
+                <section class="api-section">
+                    <h2>Need Help?</h2>
+                    <ul>
+                        <li><strong>Documentation:</strong> <a href="docs.html">Full documentation</a></li>
+                        <li><strong>Support:</strong> <a href="support.html">Contact support</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:api@araviel.ai">api@araviel.ai</a></li>
+                        <li><strong>Status:</strong> <a href="status.html">API status page</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="legal-footer">
+        <div class="container">
+            <p>&copy; 2025 Araviel. All rights reserved. | <a href="../index.html">Home</a> | <a href="docs.html">Docs</a> | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a></p>
+        </div>
+    </footer>
+</body>
+</html>
