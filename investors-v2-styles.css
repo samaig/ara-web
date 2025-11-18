@@ -1,0 +1,260 @@
+/* ============================================
+   INVESTORS SECTION V2 - INVESTOR LANGUAGE
+   ============================================ */
+
+.investors-v2 {
+    padding: var(--spacing-32) 0;
+    background: linear-gradient(180deg, var(--color-primary) 0%, #0f1428 100%);
+    color: var(--color-white);
+}
+
+.investors-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-16);
+}
+
+.investors-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: var(--font-weight-extrabold);
+    line-height: 1.1;
+    margin-bottom: var(--spacing-6);
+}
+
+.investors-lead {
+    font-size: var(--font-size-xl);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: var(--spacing-12);
+    max-width: 600px;
+}
+
+/* Key Metrics */
+.key-metrics {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-8);
+    margin-bottom: var(--spacing-12);
+}
+
+.metric-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-4);
+    padding: var(--spacing-5) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metric-item:last-child {
+    border-bottom: none;
+}
+
+.metric-icon {
+    font-size: var(--font-size-3xl);
+    flex-shrink: 0;
+}
+
+.metric-number {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: #06FFA5;
+    margin-bottom: var(--spacing-1);
+}
+
+.metric-desc {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Investment Highlights */
+.investment-highlights,
+.traction-section,
+.investment-ask {
+    margin-bottom: var(--spacing-12);
+}
+
+.investment-highlights h3,
+.traction-section h3,
+.investment-ask h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-6);
+    color: var(--color-white);
+}
+
+.highlights-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+.highlights-list li {
+    padding-left: var(--spacing-6);
+    position: relative;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.highlights-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #06FFA5;
+    font-weight: bold;
+}
+
+.highlights-list strong {
+    color: var(--color-white);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* Traction */
+.traction-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-6);
+}
+
+.traction-stat {
+    background: rgba(255, 255, 255, 0.05);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.traction-number {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-extrabold);
+    background: linear-gradient(135deg, #9D4EDD, #FF7A59);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--spacing-2);
+}
+
+.traction-label {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    margin-bottom: var(--spacing-2);
+}
+
+.traction-note {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* The Ask */
+.investment-ask p {
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: var(--spacing-8);
+}
+
+.ask-cta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+.contact-info {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Sidebar */
+.investors-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+}
+
+.sidebar-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--spacing-8);
+    border-radius: var(--radius-xl);
+}
+
+.sidebar-card h4 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-5);
+    color: var(--color-white);
+}
+
+/* Competitor Comparison */
+.competitor-comparison {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+.comp-item {
+    padding: var(--spacing-4);
+    border-radius: var(--radius-md);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.comp-name {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    margin-bottom: var(--spacing-2);
+}
+
+.comp-weakness {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.comp-strength {
+    font-size: var(--font-size-sm);
+    color: #06FFA5;
+    font-weight: var(--font-weight-medium);
+}
+
+/* Revenue Breakdown */
+.revenue-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-5);
+}
+
+.revenue-item {
+    padding-bottom: var(--spacing-4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.revenue-item:last-child {
+    border-bottom: none;
+}
+
+.revenue-source {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    margin-bottom: var(--spacing-2);
+}
+
+.revenue-target {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.team-note {
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .investors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .traction-grid {
+        grid-template-columns: 1fr;
+    }
+}
