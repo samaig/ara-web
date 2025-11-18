@@ -81,7 +81,7 @@
                 <li><a href="#investors">Investors</a></li>
             </ul>
             <div class="nav-actions">
-                <a href="#waitlist" class="btn btn-secondary">Join Waitlist</a>
+                <a href="#waitlist" class="btn btn-nav">Join Waitlist</a>
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
                 <span></span>
@@ -112,11 +112,11 @@
         <div class="container hero-content">
             <div class="hero-text">
                 <h1 class="hero-title animate-in">
-                    Your Intelligent Companion<br>
-                    <span class="gradient-text">for Everything AI</span>
+                    <span class="gradient-text">One AI.</span> Every Model.<br>
+                    Zero Complexity.
                 </h1>
                 <p class="hero-subtitle animate-in delay-1">
-                    Stop juggling multiple AI platforms. Araviel automatically selects the best model for every task, giving you world-class intelligence in one simple, warm interface.
+                    Why choose between ChatGPT, Claude, or Gemini? Araviel gives you all of them. We automatically route every request to the perfect AI model, so you always get the best answer. No switching. No guessing. Just results.
                 </p>
                 <div class="hero-cta animate-in delay-2">
                     <a href="#waitlist" class="btn btn-primary btn-large">
@@ -198,64 +198,94 @@
     <!-- Solution Section -->
     <section id="solution" class="solution">
         <div class="container">
-            <div class="solution-content">
-                <div class="solution-visual">
-                    <div class="solution-graphic">
-                        <div class="graphic-center">
-                            <div class="center-logo">
-                                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="30" cy="30" r="28" stroke="url(#gradient1)" stroke-width="2"/>
-                                    <circle cx="30" cy="30" r="20" fill="url(#gradient2)"/>
-                                    <path d="M30 15L42 25V35L30 45L18 35V25L30 15Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
-                                    <defs>
-                                        <linearGradient id="gradient1" x1="0" y1="0" x2="60" y2="60">
-                                            <stop offset="0%" stop-color="#A78BFA"/>
-                                            <stop offset="100%" stop-color="#FF6B6B"/>
-                                        </linearGradient>
-                                        <linearGradient id="gradient2" x1="10" y1="10" x2="50" y2="50">
-                                            <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.3"/>
-                                            <stop offset="100%" stop-color="#FF6B6B" stop-opacity="0.3"/>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </div>
-                            <span class="center-label">Araviel</span>
-                        </div>
-                        <div class="orbit-ring"></div>
-                        <div class="model-node node-1">GPT</div>
-                        <div class="model-node node-2">Claude</div>
-                        <div class="model-node node-3">Gemini</div>
-                        <div class="model-node node-4">Llama</div>
-                        <div class="model-node node-5">Perplexity</div>
-                        <div class="model-node node-6">More</div>
+            <div class="section-header centered">
+                <span class="section-tag">The Araviel Solution</span>
+                <h2 class="section-title">One Platform.<br>Every AI Model.</h2>
+                <p class="section-description">
+                    Stop switching between ChatGPT, Claude, Gemini, and others. Araviel brings them all together and automatically picks the best one for you.
+                </p>
+            </div>
+            <div class="solution-visual-container">
+                <div class="models-ecosystem">
+                    <div class="ecosystem-center">
+                        <div class="center-pulse"></div>
+                        <svg class="center-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="28" stroke="url(#centerGrad)" stroke-width="2.5"/>
+                            <path d="M30 10L45 20V40L30 50L15 40V20L30 10Z" fill="url(#centerFill)" stroke="white" stroke-width="2"/>
+                            <defs>
+                                <linearGradient id="centerGrad" x1="0" y1="0" x2="60" y2="60">
+                                    <stop offset="0%" stop-color="#A78BFA"/>
+                                    <stop offset="100%" stop-color="#FF6B6B"/>
+                                </linearGradient>
+                                <linearGradient id="centerFill" x1="15" y1="10" x2="45" y2="50">
+                                    <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.8"/>
+                                    <stop offset="100%" stop-color="#FF6B6B" stop-opacity="0.8"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="center-label">Araviel</span>
+                    </div>
+
+                    <div class="model-orbit">
+                        <svg class="orbit-line" viewBox="0 0 400 400">
+                            <circle cx="200" cy="200" r="150" fill="none" stroke="url(#orbitGrad)" stroke-width="1" stroke-dasharray="4 4" opacity="0.3"/>
+                            <defs>
+                                <linearGradient id="orbitGrad">
+                                    <stop offset="0%" stop-color="#A78BFA"/>
+                                    <stop offset="100%" stop-color="#FF6B6B"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <div class="model-card model-1">
+                        <div class="model-icon">🤖</div>
+                        <span class="model-name">GPT-4</span>
+                        <div class="connection-line"></div>
+                    </div>
+                    <div class="model-card model-2">
+                        <div class="model-icon">🧠</div>
+                        <span class="model-name">Claude</span>
+                        <div class="connection-line"></div>
+                    </div>
+                    <div class="model-card model-3">
+                        <div class="model-icon">✨</div>
+                        <span class="model-name">Gemini</span>
+                        <div class="connection-line"></div>
+                    </div>
+                    <div class="model-card model-4">
+                        <div class="model-icon">🦙</div>
+                        <span class="model-name">Llama</span>
+                        <div class="connection-line"></div>
+                    </div>
+                    <div class="model-card model-5">
+                        <div class="model-icon">🔍</div>
+                        <span class="model-name">Perplexity</span>
+                        <div class="connection-line"></div>
+                    </div>
+                    <div class="model-card model-6">
+                        <div class="model-icon">➕</div>
+                        <span class="model-name">More</span>
+                        <div class="connection-line"></div>
                     </div>
                 </div>
-                <div class="solution-text">
-                    <span class="section-tag">The Araviel Solution</span>
-                    <h2 class="section-title">One Intelligent Home<br>for Every AI Model</h2>
-                    <p class="solution-description">
-                        Araviel is your lifestyle companion that sits at the center of your daily life. We automatically route every request to the best AI model, so you get world-class intelligence without the complexity.
-                    </p>
-                    <ul class="solution-benefits">
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-                            </svg>
-                            <span><strong>Smart Routing:</strong> Powered by ADE, our decision engine that selects the perfect model for every task</span>
-                        </li>
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-                            </svg>
-                            <span><strong>Seamless Experience:</strong> One simple interface that feels warm, personal, and effortless</span>
-                        </li>
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-                            </svg>
-                            <span><strong>Transparent Pricing:</strong> Clear, predictable costs with flexible options that fit your needs</span>
-                        </li>
-                    </ul>
+            </div>
+
+            <div class="solution-benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Instant Intelligence</h3>
+                    <p>ADE routes your request to the optimal model in milliseconds. You get the best answer every time.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Always Accurate</h3>
+                    <p>Need coding help? Get GPT-4. Deep reasoning? Claude. Research? Perplexity. The right tool, automatically.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>One Simple Price</h3>
+                    <p>No more juggling multiple subscriptions. One platform, one price, unlimited intelligence.</p>
                 </div>
             </div>
         </div>
