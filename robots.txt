@@ -1,0 +1,15 @@
+# Araviel - Robots.txt
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://araviel.ai/sitemap.xml
+
+# Crawl-delay (optional, adjust based on server capacity)
+Crawl-delay: 1
+
+# Disallow specific paths (if needed in the future)
+# Disallow: /admin/
+# Disallow: /api/
