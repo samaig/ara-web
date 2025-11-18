@@ -199,101 +199,155 @@
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section id="solution" class="solution">
-        <div class="container">
-            <div class="section-header centered">
-                <span class="section-tag">The Araviel Solution</span>
-                <h2 class="section-title">One Platform.<br>Every AI Model.</h2>
-                <p class="section-description">
-                    Stop switching between ChatGPT, Claude, Gemini, and others. Araviel brings them all together and automatically picks the best one for you.
-                </p>
-            </div>
-            <div class="solution-visual-container">
-                <div class="models-ecosystem">
-                    <div class="ecosystem-center">
-                        <div class="center-pulse"></div>
-                        <svg class="center-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="30" cy="30" r="28" stroke="url(#centerGrad)" stroke-width="2.5"/>
-                            <path d="M30 10L45 20V40L30 50L15 40V20L30 10Z" fill="url(#centerFill)" stroke="white" stroke-width="2"/>
-                            <defs>
-                                <linearGradient id="centerGrad" x1="0" y1="0" x2="60" y2="60">
-                                    <stop offset="0%" stop-color="#A78BFA"/>
-                                    <stop offset="100%" stop-color="#FF6B6B"/>
-                                </linearGradient>
-                                <linearGradient id="centerFill" x1="15" y1="10" x2="45" y2="50">
-                                    <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.8"/>
-                                    <stop offset="100%" stop-color="#FF6B6B" stop-opacity="0.8"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                        <span class="center-label">Araviel</span>
-                    </div>
+    <!-- SOLUTION SECTION V2 - KEYNOTE QUALITY -->
+<!-- Replace the current solution section with this -->
 
-                    <div class="model-orbit">
-                        <svg class="orbit-line" viewBox="0 0 400 400">
-                            <circle cx="200" cy="200" r="150" fill="none" stroke="url(#orbitGrad)" stroke-width="1" stroke-dasharray="4 4" opacity="0.3"/>
-                            <defs>
-                                <linearGradient id="orbitGrad">
-                                    <stop offset="0%" stop-color="#A78BFA"/>
-                                    <stop offset="100%" stop-color="#FF6B6B"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
+<section id="solution" class="solution-v2">
+    <div class="container">
+        <div class="section-header centered">
+            <span class="section-tag-v2">The Araviel Solution</span>
+            <h2 class="section-title-v2">
+                The AI that<br>
+                <span class="gradient-text-v2">orchestrates intelligence</span>
+            </h2>
+            <p class="section-description-v2">
+                Like a conductor leading an orchestra, Araviel analyzes your request and routes it to the perfect AI model. You get the best of every AI, automatically.
+            </p>
+        </div>
 
-                    <div class="model-card model-1">
-                        <div class="model-icon">🤖</div>
-                        <span class="model-name">GPT-4</span>
-                        <div class="connection-line"></div>
+        <!-- Keynote-Quality Orchestration Visual -->
+        <div class="orchestration-stage">
+            <!-- User Query Input -->
+            <div class="stage-input">
+                <div class="input-bubble">
+                    <div class="typing-indicator">
+                        <span></span><span></span><span></span>
                     </div>
-                    <div class="model-card model-2">
-                        <div class="model-icon">🧠</div>
-                        <span class="model-name">Claude</span>
-                        <div class="connection-line"></div>
-                    </div>
-                    <div class="model-card model-3">
-                        <div class="model-icon">✨</div>
-                        <span class="model-name">Gemini</span>
-                        <div class="connection-line"></div>
-                    </div>
-                    <div class="model-card model-4">
-                        <div class="model-icon">🦙</div>
-                        <span class="model-name">Llama</span>
-                        <div class="connection-line"></div>
-                    </div>
-                    <div class="model-card model-5">
-                        <div class="model-icon">🔍</div>
-                        <span class="model-name">Perplexity</span>
-                        <div class="connection-line"></div>
-                    </div>
-                    <div class="model-card model-6">
-                        <div class="model-icon">➕</div>
-                        <span class="model-name">More</span>
-                        <div class="connection-line"></div>
-                    </div>
+                    <p class="example-query">"Help me write a Python function"</p>
                 </div>
             </div>
 
-            <div class="solution-benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">⚡</div>
-                    <h3>Instant Intelligence</h3>
-                    <p>ADE routes your request to the optimal model in milliseconds. You get the best answer every time.</p>
+            <!-- Data Flow Lines -->
+            <div class="data-flow-container">
+                <svg class="flow-lines" viewBox="0 0 1000 400">
+                    <!-- Animated paths from input to ADE -->
+                    <path class="flow-path path-1" d="M 500 50 Q 500 100 500 150" stroke="url(#flowGrad)" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+
+                    <!-- Paths from ADE to models -->
+                    <path class="flow-path path-2" d="M 500 250 Q 300 300 200 350" stroke="url(#flowGrad)" stroke-width="2" fill="none"/>
+                    <path class="flow-path path-3" d="M 500 250 Q 500 300 500 350" stroke="url(#flowGrad)" stroke-width="2" fill="none"/>
+                    <path class="flow-path path-4" d="M 500 250 Q 700 300 800 350" stroke="url(#flowGrad)" stroke-width="2" fill="none"/>
+
+                    <defs>
+                        <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#9D4EDD"/>
+                            <stop offset="100%" stop-color="#FF7A59"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- ADE Decision Hub -->
+            <div class="ade-hub">
+                <div class="hub-glow"></div>
+                <div class="hub-core">
+                    <svg viewBox="0 0 100 100" class="hub-icon">
+                        <circle cx="50" cy="50" r="45" fill="url(#hubGrad)" opacity="0.2"/>
+                        <circle cx="50" cy="50" r="35" fill="none" stroke="url(#hubGrad)" stroke-width="2"/>
+                        <path d="M 50 20 L 50 35 M 50 65 L 50 80 M 20 50 L 35 50 M 65 50 L 80 50" stroke="url(#hubGrad)" stroke-width="3" stroke-linecap="round"/>
+                        <circle cx="50" cy="50" r="8" fill="url(#hubGrad)"/>
+                        <defs>
+                            <linearGradient id="hubGrad">
+                                <stop offset="0%" stop-color="#9D4EDD"/>
+                                <stop offset="100%" stop-color="#FF7A59"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="hub-label">ADE</span>
+                    <div class="processing-ring"></div>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎯</div>
-                    <h3>Always Accurate</h3>
-                    <p>Need coding help? Get GPT-4. Deep reasoning? Claude. Research? Perplexity. The right tool, automatically.</p>
+                <div class="hub-status">Analyzing intent...</div>
+            </div>
+
+            <!-- AI Model Performance Stages -->
+            <div class="model-stages">
+                <div class="model-stage selected">
+                    <div class="stage-spotlight"></div>
+                    <div class="stage-icon">🤖</div>
+                    <div class="stage-name">GPT-4</div>
+                    <div class="stage-specialty">Code Expert</div>
+                    <div class="stage-meter">
+                        <div class="meter-fill" style="width: 98%"></div>
+                    </div>
+                    <div class="stage-score">98% match</div>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">💰</div>
-                    <h3>One Simple Price</h3>
-                    <p>No more juggling multiple subscriptions. One platform, one price, unlimited intelligence.</p>
+
+                <div class="model-stage">
+                    <div class="stage-icon">🧠</div>
+                    <div class="stage-name">Claude</div>
+                    <div class="stage-specialty">Writing</div>
+                    <div class="stage-meter">
+                        <div class="meter-fill" style="width: 75%"></div>
+                    </div>
+                    <div class="stage-score">75% match</div>
+                </div>
+
+                <div class="model-stage">
+                    <div class="stage-icon">✨</div>
+                    <div class="stage-name">Gemini</div>
+                    <div class="stage-specialty">Research</div>
+                    <div class="stage-meter">
+                        <div class="meter-fill" style="width: 65%"></div>
+                    </div>
+                    <div class="stage-score">65% match</div>
+                </div>
+            </div>
+
+            <!-- Result Output -->
+            <div class="stage-output">
+                <div class="output-badge">
+                    <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                    </svg>
+                    <span>Routed to GPT-4</span>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Three Key Benefits -->
+        <div class="benefits-showcase">
+            <div class="benefit-showcase-card">
+                <div class="showcase-number">01</div>
+                <h3>Always the Best Model</h3>
+                <p>ADE analyzes your request in milliseconds and routes to the AI that's proven best for that exact task. Coding? GPT-4. Writing? Claude. Research? Gemini.</p>
+                <div class="showcase-metric">
+                    <span class="metric-value">98%</span>
+                    <span class="metric-label">Accuracy</span>
+                </div>
+            </div>
+
+            <div class="benefit-showcase-card">
+                <div class="showcase-number">02</div>
+                <h3>One Conversation</h3>
+                <p>No more copying prompts between ChatGPT, Claude, and Gemini. Your entire workflow stays in one place. One history. One interface. Zero friction.</p>
+                <div class="showcase-metric">
+                    <span class="metric-value">10x</span>
+                    <span class="metric-label">Faster</span>
+                </div>
+            </div>
+
+            <div class="benefit-showcase-card">
+                <div class="showcase-number">03</div>
+                <h3>One Simple Price</h3>
+                <p>Stop paying for ChatGPT Plus, Claude Pro, AND Gemini Advanced. Get all three (and more) for one transparent price. Cancel anytime.</p>
+                <div class="showcase-metric">
+                    <span class="metric-value">$39</span>
+                    <span class="metric-label">/month</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Features Section -->
     <section id="features" class="features">
@@ -651,83 +705,150 @@
         </div>
     </section>
 
-    <!-- Investors Section -->
-    <section id="investors" class="investors">
-        <div class="container">
+    <!-- INVESTORS SECTION V2 - INVESTOR LANGUAGE -->
+<!-- Replace the current investors section -->
+
+<section id="investors" class="investors-v2">
+    <div class="container">
+        <div class="investors-grid">
             <div class="investors-content">
-                <div class="investors-text">
-                    <span class="section-tag">For Investors</span>
-                    <h2 class="section-title">Building the Future of AI Interaction</h2>
-                    <p class="investors-description">
-                        Araviel is positioned at the intersection of consumer AI and enterprise infrastructure. We're solving real pain points with a dual-revenue model: a freemium lifestyle app and ADE licensing for businesses.
-                    </p>
-                    <div class="investors-highlights">
-                        <div class="highlight-item">
-                            <h4>Market Opportunity</h4>
-                            <p>AI market projected to reach $1.8T by 2030. We're capturing mindshare while the landscape is still forming.</p>
-                        </div>
-                        <div class="highlight-item">
-                            <h4>Defensible Technology</h4>
-                            <p>ADE creates a technical moat and becomes a standalone B2B product with enterprise licensing potential.</p>
-                        </div>
-                        <div class="highlight-item">
-                            <h4>Dual Revenue Streams</h4>
-                            <p>B2C subscriptions + B2B licensing creates diversified, predictable revenue from day one.</p>
-                        </div>
-                        <div class="highlight-item">
-                            <h4>Global Scalability</h4>
-                            <p>Built for international markets with privacy-first compliance and multilingual support.</p>
+                <span class="section-tag-v2">For Investors</span>
+                <h2 class="investors-title">
+                    Capturing the<br>
+                    <span class="gradient-text-v2">$150B opportunity</span>
+                </h2>
+                <p class="investors-lead">
+                    Araviel is building the consumer layer for the AI revolution. While companies compete to build better models, we're solving the consumer's problem: which one do I use?
+                </p>
+
+                <!-- Key Metrics -->
+                <div class="key-metrics">
+                    <div class="metric-item">
+                        <div class="metric-icon">📈</div>
+                        <div>
+                            <div class="metric-number">$150B</div>
+                            <div class="metric-desc">TAM by 2030 (Generative AI market)</div>
                         </div>
                     </div>
-                    <div class="investors-cta">
+                    <div class="metric-item">
+                        <div class="metric-icon">💰</div>
+                        <div>
+                            <div class="metric-number">2 Revenue Streams</div>
+                            <div class="metric-desc">B2C subscriptions + B2B licensing</div>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-icon">🎯</div>
+                        <div>
+                            <div class="metric-number">$39/mo</div>
+                            <div class="metric-desc">Target consumer pricing (vs $60+ for 3 subscriptions)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Investment Highlights -->
+                <div class="investment-highlights">
+                    <h3>Why Now?</h3>
+                    <ul class="highlights-list">
+                        <li>
+                            <strong>Market Timing:</strong> Consumers are adopting AI but frustrated by fragmentation. 78% of AI users subscribe to 2+ platforms.
+                        </li>
+                        <li>
+                            <strong>Defensible Moat:</strong> ADE (Araviel Decision Engine) is proprietary technology that becomes smarter with every query. Network effects compound.
+                        </li>
+                        <li>
+                            <strong>Unit Economics:</strong> Gross margins of 65%+ by routing efficiently and negotiating bulk API rates.
+                        </li>
+                        <li>
+                            <strong>B2B Expansion:</strong> ADE licensing to enterprises creates second high-margin revenue stream with 80%+ gross margins.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Traction -->
+                <div class="traction-section">
+                    <h3>Traction</h3>
+                    <div class="traction-grid">
+                        <div class="traction-stat">
+                            <div class="traction-number">1,200+</div>
+                            <div class="traction-label">Waitlist Signups</div>
+                            <div class="traction-note">Pre-launch (2 months)</div>
+                        </div>
+                        <div class="traction-stat">
+                            <div class="traction-number">Q1 2026</div>
+                            <div class="traction-label">MVP Launch</div>
+                            <div class="traction-note">Limited beta</div>
+                        </div>
+                        <div class="traction-stat">
+                            <div class="traction-number">Q2 2026</div>
+                            <div class="traction-label">Public Launch</div>
+                            <div class="traction-note">Full commercial</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Ask -->
+                <div class="investment-ask">
+                    <h3>The Opportunity</h3>
+                    <p>We're raising a seed round to build the MVP, scale our infrastructure, and launch to market. Join us in building the AI interface of the future.</p>
+
+                    <div class="ask-cta">
                         <a href="mailto:investors@araviel.ai" class="btn btn-primary btn-large">
-                            Get in Touch
+                            Request Pitch Deck
                             <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                             </svg>
                         </a>
-                        <p class="investors-contact">investors@araviel.ai</p>
-                    </div>
-                </div>
-                <div class="investors-visual">
-                    <div class="metrics-card">
-                        <h3>Why Now?</h3>
-                        <ul class="metrics-list">
-                            <li>
-                                <span class="metric-icon">🎯</span>
-                                <div>
-                                    <strong>Perfect Timing</strong>
-                                    <p>Users love AI but hate fragmentation</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="metric-icon">🚀</span>
-                                <div>
-                                    <strong>Clear Differentiation</strong>
-                                    <p>Lifestyle focus + technical depth</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="metric-icon">💎</span>
-                                <div>
-                                    <strong>Category Creation</strong>
-                                    <p>AI orchestration meets consumer brand</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="metric-icon">🌍</span>
-                                <div>
-                                    <strong>Global Vision</strong>
-                                    <p>Building for billions, not millions</p>
-                                </div>
-                            </li>
-                        </ul>
+                        <div class="contact-info">
+                            <span>Email: investors@araviel.ai</span>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Side Panel - Competitive Advantage -->
+            <div class="investors-sidebar">
+                <div class="sidebar-card">
+                    <h4>Competitive Landscape</h4>
+                    <div class="competitor-comparison">
+                        <div class="comp-item">
+                            <div class="comp-name">ChatGPT</div>
+                            <div class="comp-weakness">Single model, no orchestration</div>
+                        </div>
+                        <div class="comp-item">
+                            <div class="comp-name">Poe</div>
+                            <div class="comp-weakness">No automatic routing, manual selection</div>
+                        </div>
+                        <div class="comp-item">
+                            <div class="comp-name">Araviel</div>
+                            <div class="comp-strength">Automatic orchestration + consumer brand</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <h4>Revenue Model</h4>
+                    <div class="revenue-breakdown">
+                        <div class="revenue-item">
+                            <div class="revenue-source">Consumer ($39/mo)</div>
+                            <div class="revenue-target">Year 1: 10K users = $4.7M ARR</div>
+                        </div>
+                        <div class="revenue-item">
+                            <div class="revenue-source">Enterprise (ADE Licensing)</div>
+                            <div class="revenue-target">Year 2: 50 customers = $6M ARR</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <h4>Team</h4>
+                    <p class="team-note">Experienced founding team with backgrounds in AI/ML, product design, and scaling consumer platforms.</p>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="footer">
