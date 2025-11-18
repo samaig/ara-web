@@ -3436,3 +3436,244 @@ input, textarea, select {
         display: none;
     }
 }
+
+/* ============================================
+   INVESTORS SECTION - BEAUTIFUL REDESIGN
+   ============================================ */
+
+.investors-beautiful {
+    padding: var(--spacing-32) 0;
+    background: linear-gradient(180deg, var(--color-primary) 0%, #0f1428 100%);
+    color: white;
+}
+
+.container-wide {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.investors-hero {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-20);
+}
+
+.investors-hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: var(--font-weight-extrabold);
+    line-height: 1.1;
+    margin-bottom: var(--spacing-6);
+}
+
+.investors-hero-subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Stats Grid */
+.investors-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-8);
+    margin-bottom: var(--spacing-20);
+}
+
+.investor-stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--spacing-10);
+    border-radius: var(--radius-2xl);
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.investor-stat-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.stat-icon-large {
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-4);
+}
+
+.stat-number-large {
+    font-size: 3rem;
+    font-weight: var(--font-weight-extrabold);
+    background: linear-gradient(135deg, #9D4EDD, #FF7A59);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--spacing-2);
+}
+
+.stat-label-large {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: white;
+    margin-bottom: var(--spacing-2);
+}
+
+.stat-detail {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Opportunity Section */
+.opportunity-section {
+    margin-bottom: var(--spacing-20);
+}
+
+.section-subtitle-v2 {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-10);
+    text-align: center;
+}
+
+.opportunity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-8);
+}
+
+.opportunity-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: var(--spacing-8);
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all var(--transition-base);
+}
+
+.opportunity-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-4px);
+}
+
+.opportunity-number {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-extrabold);
+    color: #06FFA5;
+    opacity: 0.3;
+    margin-bottom: var(--spacing-4);
+}
+
+.opportunity-card h4 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-3);
+    color: white;
+}
+
+.opportunity-card p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+}
+
+/* Traction & Roadmap */
+.traction-roadmap-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-16);
+    margin-bottom: var(--spacing-20);
+}
+
+.traction-list,
+.roadmap-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-5);
+}
+
+.traction-item {
+    display: flex;
+    gap: var(--spacing-4);
+    align-items: flex-start;
+}
+
+.traction-check {
+    width: 32px;
+    height: 32px;
+    background: #06FFA5;
+    color: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-bold);
+    flex-shrink: 0;
+}
+
+.traction-item strong {
+    color: white;
+    display: block;
+    margin-bottom: var(--spacing-1);
+}
+
+.traction-item p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: var(--font-size-sm);
+    margin: 0;
+}
+
+.roadmap-item {
+    padding: var(--spacing-4);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid #9D4EDD;
+}
+
+.roadmap-date {
+    font-weight: var(--font-weight-bold);
+    color: #9D4EDD;
+    margin-bottom: var(--spacing-2);
+}
+
+.roadmap-milestone {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Investment Ask */
+.investment-ask-section {
+    background: linear-gradient(135deg, rgba(157, 78, 221, 0.1), rgba(255, 122, 89, 0.1));
+    padding: var(--spacing-12);
+    border-radius: var(--radius-2xl);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.ask-description {
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-8);
+}
+
+.ask-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-4);
+}
+
+.ask-email {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .investors-stats-grid,
+    .opportunity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .traction-roadmap-section {
+        grid-template-columns: 1fr;
+    }
+}
+
