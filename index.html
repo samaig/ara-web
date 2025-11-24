@@ -42,7 +42,7 @@
 <body>
 
 <!-- Navigation -->
-<nav class="nav">
+<nav class="nav" id="nav">
     <div class="container">
         <a href="#" class="logo">Araviel</a>
         <ul class="nav-menu">
@@ -502,10 +502,14 @@
     <div class="container">
         <h2>Join the future of personal AI</h2>
         <p>Be among the first to experience Araviel when we launch in February 2026. Get early access, exclusive updates, and priority onboarding.</p>
-        <form class="waitlist-form">
-            <input type="email" placeholder="Enter your email address" required>
+        <form class="waitlist-form" id="waitlistForm">
+            <input type="email" id="email" placeholder="Enter your email address" required>
             <button type="submit" class="button button-primary">Join Waitlist</button>
         </form>
+        <div id="waitlistSuccess" style="display: none; text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 1rem; margin-bottom: 2rem;">
+            <h3 style="color: white; margin-bottom: 1rem;">🎉 Welcome to the future!</h3>
+            <p style="color: rgba(255,255,255,0.9);">You're on the waitlist. We'll send you exclusive updates as we get closer to launch.</p>
+        </div>
         <p class="privacy-note">We respect your privacy. No spam, ever. Unsubscribe anytime. See our <a href="/pages/privacy.html">privacy policy</a>.</p>
         <div class="waitlist-stats">
             <div class="stat">
@@ -577,6 +581,13 @@
         </div>
     </div>
 </footer>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+</button>
 
 <script src="script.js"></script>
 </body>
