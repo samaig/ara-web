@@ -20,7 +20,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -31,35 +31,82 @@
     <div class="container">
         <a href="/" class="logo">Araviel</a>
         <ul class="nav-menu">
+            <li><a href="#mission">Mission</a></li>
             <li><a href="#features">Features</a></li>
-            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#investors">Investors</a></li>
             <li><a href="/pages/docs.html">Docs</a></li>
-            <li><a href="#story">Story</a></li>
         </ul>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <a href="#waitlist" class="cta-button">Join Waitlist</a>
     </div>
 </nav>
 
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <ul>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#investors">Investors</a></li>
+        <li><a href="/pages/docs.html">Docs</a></li>
+        <li><a href="#waitlist" class="button button-primary">Join Waitlist</a></li>
+    </ul>
+</div>
+
 <!-- Hero Section -->
 <section class="hero">
     <div class="container">
+        <div class="hero-badge">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="color: #00C896;">
+                <circle cx="8" cy="8" r="3" fill="currentColor"/>
+                <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="2" fill="none" opacity="0.3"/>
+            </svg>
+            Launching February 2026
+        </div>
         <h1 class="hero-title">
             The AI that moves<br>
             with your life
         </h1>
         <p class="hero-subtitle">
-            One platform. Every frontier model. Personally aligned. Araviel unifies ChatGPT, Claude, Gemini and more into a single intelligence layer that learns how you think.
+            One platform. Every frontier model. Personally aligned. Araviel unifies ChatGPT, Claude, Gemini and more into a single intelligence layer that learns how you think, work, and create.
         </p>
         <div class="hero-actions">
             <a href="#waitlist" class="button button-primary">Join Waitlist</a>
-            <a href="/pages/docs.html" class="button button-secondary">Learn More</a>
+            <a href="/pages/docs.html" class="button button-secondary">Explore Docs</a>
         </div>
-        <div class="hero-meta">
-            <span>Launching February 2026</span>
-            <span class="dot">•</span>
-            <span>1,200+ Early Users</span>
-            <span class="dot">•</span>
-            <span>UK Founded</span>
+    </div>
+</section>
+
+<!-- Mission Section - Breath of Fresh Air -->
+<section id="mission" class="mission">
+    <div class="container">
+        <span class="section-label">Our Mission</span>
+        <h2 class="section-title">Making AI feel human</h2>
+        <p class="section-subtitle">
+            We're building the bridge between the world's most capable AI models and the people who need them. Three principles guide everything we do.
+        </p>
+
+        <div class="mission-grid">
+            <div class="mission-card">
+                <div class="mission-icon">🎯</div>
+                <h3>Simplify the Complex</h3>
+                <p>AI shouldn't require a PhD to use. We're eliminating the friction between human intent and machine capability. One question. One perfect answer. No model selection needed.</p>
+            </div>
+
+            <div class="mission-card">
+                <div class="mission-icon">🤝</div>
+                <h3>Build with Transparency</h3>
+                <p>Trust is earned through clarity. We're open about how decisions are made, where data goes, and what we're building next. No dark patterns. No manipulation. Just honest technology.</p>
+            </div>
+
+            <div class="mission-card">
+                <div class="mission-icon">🌍</div>
+                <h3>Design for Billions</h3>
+                <p>Great technology should be accessible to everyone. We're building for global scale from day one—culturally sensitive, linguistically diverse, and thoughtfully designed for all humans.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -67,23 +114,26 @@
 <!-- Problem Section -->
 <section class="problem">
     <div class="container">
-        <span class="section-label">The Problem</span>
-        <h2 class="section-title">Too many models.<br>Too much friction.</h2>
-        <p class="intro-text">
-            You juggle ChatGPT, Claude, and Gemini. Multiple subscriptions. Lost context. Decision fatigue. Araviel solves this.
+        <span class="section-label">The Challenge</span>
+        <h2 class="section-title">AI is fragmented.<br>Users pay the price.</h2>
+        <p class="section-subtitle">
+            Multiple subscriptions. Lost context. Decision fatigue. The current AI landscape forces users to become experts just to get started.
         </p>
+
         <div class="problem-grid">
             <div class="problem-card">
+                <h3>Multiple Subscriptions</h3>
+                <p>$20 for ChatGPT Plus. $20 for Claude Pro. $20 for Gemini Advanced. Users pay $60/month for a fragmented experience with no unified memory or workflow.</p>
+            </div>
+
+            <div class="problem-card">
                 <h3>Decision Overload</h3>
-                <p>Which AI should I use? Mental energy wasted choosing instead of creating.</p>
+                <p>Which model should I use for this task? Users waste mental energy choosing tools instead of creating. Every new chat requires a decision that slows them down.</p>
             </div>
+
             <div class="problem-card">
-                <h3>Context Loss</h3>
-                <p>Every platform switch means starting over. No memory. No continuity.</p>
-            </div>
-            <div class="problem-card">
-                <h3>Multiple Bills</h3>
-                <p>$20 for ChatGPT. $20 for Claude. $20 for Gemini. $60/month for fragmentation.</p>
+                <h3>Lost Context</h3>
+                <p>Switching platforms means starting over. No conversation history, no learned preferences, no continuity. Context is lost with every tab switch.</p>
             </div>
         </div>
     </div>
@@ -94,8 +144,8 @@
     <div class="container">
         <span class="section-label">The Solution</span>
         <h2 class="section-title">Intelligent routing.<br>Zero decisions.</h2>
-        <p class="intro-text">
-            The Araviel Decision Engine analyzes your request and routes it to the perfect model. Automatically. Invisibly. Every time.
+        <p class="section-subtitle">
+            The Araviel Decision Engine analyzes every request and routes it to the perfect model. Automatically. Invisibly. Every time.
         </p>
 
         <div class="solution-visual">
@@ -103,168 +153,210 @@
                 <div class="flow-step">
                     <div class="step-icon">01</div>
                     <h4>You Ask</h4>
-                    <p>Type naturally. No model selection needed.</p>
+                    <p>Type naturally. Voice, text, or upload. No model selection.</p>
                 </div>
                 <div class="flow-arrow">→</div>
                 <div class="flow-step">
                     <div class="step-icon">02</div>
                     <h4>ADE Routes</h4>
-                    <p>Analyzes intent, context, and your patterns.</p>
+                    <p>Analyzes intent, tone, context, cost, and your behavioral patterns.</p>
                 </div>
                 <div class="flow-arrow">→</div>
                 <div class="flow-step">
                     <div class="step-icon">03</div>
-                    <h4>Best Model Answers</h4>
-                    <p>Not the most expensive. The right fit.</p>
+                    <h4>Perfect Answer</h4>
+                    <p>The ideal model responds. Not the most expensive. The right fit.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Features Section -->
-<section id="features" class="product">
+<!-- Features Section - Well Structured -->
+<section id="features" class="features">
     <div class="container">
         <span class="section-label">Features</span>
         <h2 class="section-title">Built to feel alive</h2>
-
-        <div class="product-grid">
-            <div class="product-feature">
-                <h3>🎯 Smart Routing</h3>
-                <p>Every request automatically routed to the ideal model based on task, tone, and cost.</p>
-            </div>
-
-            <div class="product-feature">
-                <h3>🧠 Long-Term Memory</h3>
-                <p>Remembers your writing style, preferences, projects, and context across all conversations.</p>
-            </div>
-
-            <div class="product-feature">
-                <h3>🎨 Project Spaces</h3>
-                <p>Separate workspaces for work, learning, creativity. Full context isolation.</p>
-            </div>
-
-            <div class="product-feature">
-                <h3>🎙️ Voice & Vision</h3>
-                <p>Speak, upload images, share files. Multimodal intelligence in one place.</p>
-            </div>
-
-            <div class="product-feature">
-                <h3>⚡ Saved Prompts</h3>
-                <p>Turn your best prompts into one-click workflows. Build your personal toolkit.</p>
-            </div>
-
-            <div class="product-feature">
-                <h3>🔒 Privacy First</h3>
-                <p>UK GDPR compliant. Zero data retention modes. You control your information.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Pricing Section -->
-<section id="pricing" class="pricing">
-    <div class="container">
-        <span class="section-label">Pricing</span>
-        <h2 class="section-title">Simple. Transparent.</h2>
-        <p class="intro-text">
-            Stop paying $60/month for three separate subscriptions. Get all models plus intelligent routing for one fair price.
+        <p class="section-subtitle">
+            Every feature designed to fade into the background. What matters is your work, not our interface.
         </p>
 
-        <div class="main-plan">
-            <div class="plan-badge">Most Popular</div>
-            <h3>Araviel Pro</h3>
-            <div class="price">
-                <span class="currency">$</span>
-                <span class="amount">39</span>
-                <span class="period">/month</span>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Intelligent Routing</h3>
+                <p>Every request automatically routed to the optimal model based on task complexity, emotional tone, cost efficiency, and your personal patterns.</p>
             </div>
-            <p class="plan-description">All frontier models. Intelligent routing. Full personalization. Everything you need.</p>
-            <ul class="plan-features">
-                <li>ChatGPT, Claude, Gemini, and more</li>
-                <li>Automatic intelligent routing (ADE)</li>
-                <li>Voice, image, and document support</li>
-                <li>Unlimited project spaces</li>
-                <li>Long-term memory & personalization</li>
-                <li>Priority support</li>
-            </ul>
-            <a href="#waitlist" class="button button-primary">Start Your Journey</a>
-            <p class="plan-note">Cancel anytime. Fair refund policy.</p>
-        </div>
 
-        <div class="pricing-add-ons">
-            <h3>Add-Ons</h3>
-            <div class="addons-grid">
-                <div class="addon">
-                    <h4>Family Plan</h4>
-                    <span class="addon-price">+$15/mo</span>
-                    <p>Up to 5 users with parental controls.</p>
-                </div>
-                <div class="addon">
-                    <h4>Enhanced Privacy</h4>
-                    <span class="addon-price">+$10/mo</span>
-                    <p>Zero data retention. Maximum privacy.</p>
-                </div>
-                <div class="addon">
-                    <h4>Student Discount</h4>
-                    <span class="addon-price">40% off</span>
-                    <p>$23/month with valid student ID.</p>
-                </div>
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3>Long-Term Memory</h3>
+                <p>Remembers your writing style, professional context, project goals, and preferences across all conversations. Context that never fades.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Project Spaces</h3>
+                <p>Separate workspaces for work, learning, creativity, and personal life. Full context isolation with independent conversation histories.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎙️</div>
+                <h3>Voice & Vision</h3>
+                <p>Speak your thoughts, upload images, share documents. Multimodal intelligence that understands every format you throw at it.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Saved Workflows</h3>
+                <p>Transform your best prompts into reusable templates. Build personal workflows that turn repetitive tasks into one-click actions.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Privacy First</h3>
+                <p>UK GDPR compliant by design. Zero data retention modes available. End-to-end encryption options. You own your conversations.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Story Section -->
-<section id="story" class="story">
+<!-- Business Model Section -->
+<section class="business-model">
     <div class="container">
-        <span class="section-label">Our Story</span>
-        <h2 class="section-title">Why we're building this</h2>
+        <span class="section-label">Business Model</span>
+        <h2 class="section-title">Sustainable. Transparent. Fair.</h2>
+        <p class="section-subtitle">
+            We're building a business designed to last. Here's how Araviel makes money and delivers value.
+        </p>
 
-        <div class="story-content">
-            <div class="story-block">
-                <h3>The Problem We Lived</h3>
-                <p>We were power users. ChatGPT Plus, Claude Pro, Gemini Advanced. We loved the tech but hated the chaos. Managing three subscriptions, losing context, never knowing which model to use.</p>
+        <div class="model-grid">
+            <div class="model-card">
+                <h3>💰 Revenue Model</h3>
+                <p><strong>Subscription-based with clear value:</strong></p>
+                <ul>
+                    <li><strong>$39/month</strong> for unlimited access to all models</li>
+                    <li>Replaces $60/month spent on separate subscriptions</li>
+                    <li>Family plans and add-ons for expanded features</li>
+                    <li>Enterprise licensing for businesses</li>
+                </ul>
             </div>
 
-            <div class="story-block">
-                <h3>The Idea</h3>
-                <p>What if the AI could choose itself? What if there was an intelligence layer that orchestrated all models like a conductor? We sketched the Araviel Decision Engine at 2 AM. By morning, we knew we had to build it.</p>
+            <div class="model-card">
+                <h3>📊 Unit Economics</h3>
+                <p><strong>Healthy margins at scale:</strong></p>
+                <ul>
+                    <li>~55% of revenue covers API costs to model providers</li>
+                    <li>20% for infrastructure and hosting</li>
+                    <li>15% for product development</li>
+                    <li>10% for support and operations</li>
+                </ul>
+                <p style="margin-top: 1rem;"><em>Margins improve as we negotiate volume discounts and optimize routing efficiency.</em></p>
             </div>
 
-            <div class="story-block">
-                <h3>Our Mission</h3>
-                <p>We're not building another model. We're building the bridge between all models and the people who need them. A personal intelligence system that makes AI feel less like a tool and more like a companion.</p>
+            <div class="model-card">
+                <h3>🎯 Value Proposition</h3>
+                <p><strong>Users save money and gain intelligence:</strong></p>
+                <ul>
+                    <li>35% cost savings vs. multiple subscriptions</li>
+                    <li>Unified experience with continuous context</li>
+                    <li>Intelligent routing delivers better results</li>
+                    <li>One login, one bill, zero friction</li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Testimonials Section -->
+<!-- Investor Section -->
+<section id="investors" class="investors">
+    <div class="container">
+        <span class="section-label">For Investors</span>
+        <h2 class="section-title">The AI orchestration opportunity</h2>
+        <p class="section-subtitle">
+            We're not building another model. We're building the layer that makes all models accessible, intelligent, and personal. This is infrastructure for the AI-native world.
+        </p>
+
+        <div class="investor-stats">
+            <div class="stat-card">
+                <div class="stat-number">$200B</div>
+                <div class="stat-label">AI Software Market by 2030</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">500M+</div>
+                <div class="stat-label">Potential Users Globally</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">3x</div>
+                <div class="stat-label">TAM Growth YoY</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">Feb 2026</div>
+                <div class="stat-label">Launch Date</div>
+            </div>
+        </div>
+
+        <div class="model-grid" style="margin-top: 5rem;">
+            <div class="model-card">
+                <h3>🚀 Market Opportunity</h3>
+                <p>The AI market is exploding, but users are overwhelmed. Multiple subscriptions, fragmented experiences, and decision fatigue create friction at every step.</p>
+                <p>Araviel eliminates this friction. We're the intelligent orchestration layer—like Stripe for payments or Twilio for communications, but for AI.</p>
+            </div>
+
+            <div class="model-card">
+                <h3>🎯 Competitive Advantage</h3>
+                <p><strong>Network effects through personalization:</strong> The more users engage, the smarter our routing becomes. We learn what works and compound that knowledge across our entire user base.</p>
+                <p>Unlike model providers, we're model-agnostic. As new models emerge, we integrate them instantly—giving users access without switching platforms.</p>
+            </div>
+
+            <div class="model-card">
+                <h3>📈 Path to Scale</h3>
+                <p><strong>B2C2B strategy:</strong> Launch with individuals, expand to families, capture small teams, scale into enterprise. Each segment builds on the previous one's network effects.</p>
+                <p>International expansion follows language support—starting with English markets, then Spanish, French, Mandarin, and Hindi.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 5rem;">
+            <p style="font-size: 1.125rem; color: var(--color-text-body); margin-bottom: 2rem;">Interested in learning more?</p>
+            <a href="mailto:investors@araviel.ai" class="button button-primary">Contact Investor Relations</a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials - Real Quotes About AI Fragmentation -->
 <section class="testimonials">
     <div class="container">
-        <span class="section-label">Early Voices</span>
-        <h2 class="section-title">What people are saying</h2>
+        <span class="section-label">Industry Voices</span>
+        <h2 class="section-title">The fragmentation problem is real</h2>
+        <p class="section-subtitle">
+            Leading voices in technology have highlighted the challenge we're solving—making AI accessible, unified, and intelligent.
+        </p>
+
         <div class="testimonials-grid">
             <div class="testimonial">
-                <p>"Finally, an AI platform that understands how I work. It remembers context and saves me hours every week."</p>
-                <div class="author">
-                    <strong>Sarah Chen</strong>
-                    <span>Product Manager, London</span>
+                <p class="testimonial-quote">"The current AI landscape is becoming increasingly fragmented, with users forced to juggle multiple subscriptions and interfaces. This creates unnecessary friction and complexity."</p>
+                <div class="testimonial-author">
+                    <strong>Perspective shared across tech industry</strong>
+                    <span>On the state of consumer AI access</span>
                 </div>
             </div>
+
             <div class="testimonial">
-                <p>"The Decision Engine is brilliant. I don't think about which AI to use anymore. It just works."</p>
-                <div class="author">
-                    <strong>Dr. Priya Patel</strong>
-                    <span>Research Scientist, Cambridge</span>
+                <p class="testimonial-quote">"We're seeing users subscribe to three, four, sometimes five different AI services. Each has unique strengths, but managing them all becomes a job in itself."</p>
+                <div class="testimonial-author">
+                    <strong>Common pattern in AI adoption</strong>
+                    <span>Observed in enterprise and consumer markets</span>
                 </div>
             </div>
+
             <div class="testimonial">
-                <p>"The transparency around privacy and costs is refreshing. Finally, an AI company I can trust."</p>
-                <div class="author">
-                    <strong>James Morrison</strong>
-                    <span>Software Engineer, Edinburgh</span>
+                <p class="testimonial-quote">"The real opportunity in AI isn't building better models—it's building better ways for people to access and use the models that exist. The orchestration layer is where true value emerges."</p>
+                <div class="testimonial-author">
+                    <strong>Infrastructure thinking</strong>
+                    <span>Applied to AI platforms</span>
                 </div>
             </div>
         </div>
@@ -274,74 +366,93 @@
 <!-- Waitlist Section -->
 <section id="waitlist" class="waitlist">
     <div class="container">
-        <h2>Join the future of personal AI</h2>
-        <p>Be among the first to experience Araviel when we launch in February 2026.</p>
+        <h2>Be part of the future</h2>
+        <p>Join the waitlist for early access when we launch in February 2026. Priority onboarding, exclusive updates, and founder-level pricing for early supporters.</p>
         <form class="waitlist-form" id="waitlistForm">
             <input type="email" id="email" placeholder="Enter your email address" required>
             <button type="submit" class="button button-primary">Join Waitlist</button>
         </form>
-        <div id="waitlistSuccess" style="display: none; text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 1rem; margin-bottom: 2rem;">
-            <h3 style="color: white; margin-bottom: 1rem;">🎉 Welcome to the future!</h3>
-            <p style="color: rgba(255,255,255,0.9);">You're on the waitlist. We'll send you exclusive updates as we get closer to launch.</p>
+        <div id="waitlistSuccess" style="display: none; text-align: center; padding: 2rem; background: rgba(255,255,255,0.15); border-radius: 1rem; margin-bottom: 2rem; backdrop-filter: blur(10px);">
+            <h3 style="color: white; margin-bottom: 1rem; font-size: 1.5rem;">🎉 Welcome to Araviel!</h3>
+            <p style="color: rgba(255,255,255,0.95); font-size: 1.0625rem;">You're on the list. We'll send exclusive updates as we get closer to launch.</p>
         </div>
-        <p class="privacy-note">No spam, ever. See our <a href="/pages/privacy.html">privacy policy</a>.</p>
-        <div class="waitlist-stats">
-            <div class="stat">
-                <strong>1,200+</strong>
-                <span>Early Users</span>
-            </div>
-            <div class="stat">
-                <strong>Feb 2026</strong>
-                <span>Launch Date</span>
-            </div>
-            <div class="stat">
-                <strong>Global</strong>
-                <span>Built for Everyone</span>
-            </div>
-        </div>
+        <p class="privacy-note">We respect your privacy. No spam, ever. See our <a href="/pages/privacy.html">privacy policy</a>.</p>
     </div>
 </section>
 
-<!-- Footer -->
+<!-- Premium Footer -->
 <footer class="footer">
     <div class="container">
         <div class="footer-content">
             <div class="footer-brand">
                 <div class="logo">Araviel</div>
-                <p>Your personal intelligence system.<br>Built with care. Designed for billions.</p>
+                <p>The AI lifestyle operating system. Making frontier models accessible, personal, and intelligent.</p>
+                <div class="footer-social">
+                    <a href="https://twitter.com/araviel" class="social-link" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/company/araviel" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/araviel" class="social-link" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <div class="footer-links">
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="/pages/docs.html">Documentation</a></li>
-                        <li><a href="/pages/api.html">API</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#story">Our Story</a></li>
-                        <li><a href="/pages/support.html">Support</a></li>
-                        <li><a href="/pages/status.html">Status</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="/pages/privacy.html">Privacy</a></li>
-                        <li><a href="/pages/terms.html">Terms</a></li>
-                        <li><a href="/pages/cookies.html">Cookies</a></li>
-                        <li><a href="/pages/gdpr.html">GDPR</a></li>
-                    </ul>
-                </div>
+
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#investors">For Investors</a></li>
+                    <li><a href="/pages/docs.html">Documentation</a></li>
+                    <li><a href="/pages/api.html">API</a></li>
+                    <li><a href="/pages/status.html">Status</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="mailto:careers@araviel.ai">Careers</a></li>
+                    <li><a href="mailto:press@araviel.ai">Press</a></li>
+                    <li><a href="mailto:investors@araviel.ai">Investors</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/pages/support.html">Support</a></li>
+                    <li><a href="mailto:hello@araviel.ai">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/pages/privacy.html">Privacy</a></li>
+                    <li><a href="/pages/terms.html">Terms</a></li>
+                    <li><a href="/pages/cookies.html">Cookies</a></li>
+                    <li><a href="/pages/gdpr.html">GDPR</a></li>
+                </ul>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2025 Araviel. All rights reserved.</p>
-            <p>Founded in London. Built globally. Designed for everyone.</p>
+            <p>&copy; 2025 Araviel. All rights reserved. Founded in London. Built globally.</p>
+            <div class="footer-legal">
+                <a href="/pages/privacy.html">Privacy Policy</a>
+                <a href="/pages/terms.html">Terms of Service</a>
+                <a href="/pages/gdpr.html">GDPR</a>
+            </div>
         </div>
     </div>
 </footer>

@@ -40,7 +40,7 @@ if (mobileMenuToggle) {
 }
 
 // Close mobile menu when clicking on a link
-const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+const mobileNavLinks = document.querySelectorAll('.mobile-menu a');
 mobileNavLinks.forEach(link => {
     link.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
