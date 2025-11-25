@@ -11,43 +11,55 @@
 
 /* ============================================
    CSS VARIABLES - DARK THEME (Default)
+   Inspired by Huntaa - Clean & Professional
    ============================================ */
 :root, [data-theme="dark"] {
-    --bg-primary: #0B0F19;
+    --bg-primary: #030712;
     --bg-secondary: #111827;
     --bg-tertiary: #1F2937;
-    --bg-card: #1a1f2e;
-    --bg-card-hover: #242b3d;
+    --bg-card: #111827;
+    --bg-card-hover: #1F2937;
 
-    --text-primary: #F9FAFB;
-    --text-secondary: #9CA3AF;
-    --text-muted: #6B7280;
+    --text-primary: #FFFFFF;
+    --text-secondary: #D1D5DB;
+    --text-muted: #9CA3AF;
     --text-inverse: #111827;
 
-    --border-color: rgba(75, 85, 99, 0.4);
-    --border-light: rgba(255, 255, 255, 0.1);
+    --border-color: #1F2937;
+    --border-light: #374151;
 
-    --accent-cyan: #06B6D4;
-    --accent-purple: #8B5CF6;
-    --accent-orange: #F97316;
-    --accent-pink: #EC4899;
+    /* Primary: Orange (Huntaa) */
+    --accent-primary: #FF6B35;
+    --accent-primary-hover: #E84A11;
+    --accent-primary-light: #4D1A0A;
+
+    /* Secondary: Cyan (Huntaa) */
+    --accent-secondary: #00B4D8;
+    --accent-secondary-hover: #0090AC;
+    --accent-secondary-light: #002A30;
+
+    /* Supporting Colors */
+    --accent-success: #06D6A0;
+    --accent-warning: #FFB627;
+    --accent-orange: #FF6B35;
+    --accent-cyan: #00B4D8;
     --accent-teal: #14B8A6;
-    --accent-yellow: #FBBF24;
-    --accent-green: #22C55E;
+    --accent-purple: #8B5CF6;
 
-    --gradient-primary: linear-gradient(135deg, #06B6D4 0%, #8B5CF6 100%);
-    --gradient-cta: linear-gradient(135deg, #F97316 0%, #06B6D4 100%);
+    --gradient-primary: linear-gradient(135deg, #FF6B35 0%, #00B4D8 100%);
+    --gradient-cta: linear-gradient(135deg, #FF6B35 0%, #00B4D8 100%);
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
-    --shadow-glow: 0 0 20px rgba(6, 182, 212, 0.2);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    --shadow-glow: 0 0 20px rgba(0, 180, 216, 0.2);
 
-    --nav-bg: rgba(11, 15, 25, 0.95);
+    --nav-bg: rgba(3, 7, 18, 0.95);
 }
 
 /* ============================================
-   LIGHT THEME
+   LIGHT THEME - Huntaa Inspired
+   Clean, Professional, Minimal
    ============================================ */
 [data-theme="light"] {
     --bg-primary: #FFFFFF;
@@ -61,13 +73,23 @@
     --text-muted: #9CA3AF;
     --text-inverse: #FFFFFF;
 
-    --border-color: rgba(0, 0, 0, 0.1);
-    --border-light: rgba(0, 0, 0, 0.05);
+    --border-color: #E5E7EB;
+    --border-light: #F3F4F6;
+
+    /* Primary: Orange (Huntaa) */
+    --accent-primary: #FF6B35;
+    --accent-primary-hover: #E84A11;
+    --accent-primary-light: #FFF4ED;
+
+    /* Secondary: Cyan (Huntaa) */
+    --accent-secondary: #00B4D8;
+    --accent-secondary-hover: #0090AC;
+    --accent-secondary-light: #E6F7FB;
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
-    --shadow-glow: 0 0 20px rgba(6, 182, 212, 0.15);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --shadow-glow: 0 0 20px rgba(0, 180, 216, 0.15);
 
     --nav-bg: rgba(255, 255, 255, 0.95);
 }
@@ -213,9 +235,9 @@ section {
 }
 
 .theme-toggle:hover {
-    border-color: var(--accent-cyan);
-    color: var(--accent-cyan);
-    background: rgba(6, 182, 212, 0.1);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    background: rgba(255, 107, 53, 0.1);
 }
 
 [data-theme="dark"] .icon-moon { display: none; }
@@ -435,7 +457,7 @@ section {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 2rem;
     font-weight: 700;
-    color: var(--accent-cyan);
+    color: var(--accent-primary);
     line-height: 1;
 }
 
@@ -488,7 +510,7 @@ section {
 }
 
 .hero-stat svg {
-    color: var(--accent-cyan);
+    color: var(--accent-success);
 }
 
 .hero-stat strong {
@@ -525,11 +547,11 @@ section {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: var(--accent-cyan);
+    color: var(--accent-primary);
     margin-bottom: 16px;
     padding: 6px 14px;
-    background: rgba(6, 182, 212, 0.1);
-    border: 1px solid rgba(6, 182, 212, 0.3);
+    background: rgba(255, 107, 53, 0.1);
+    border: 1px solid rgba(255, 107, 53, 0.3);
     border-radius: 6px;
 }
 
@@ -595,13 +617,15 @@ section {
 
 .card-icon svg { stroke: white; }
 
+/* Icon colors - Clean Huntaa palette */
 .icon-orange { background: var(--accent-orange); }
 .icon-teal { background: var(--accent-teal); }
 .icon-purple { background: var(--accent-purple); }
 .icon-cyan { background: var(--accent-cyan); }
-.icon-yellow { background: var(--accent-yellow); }
-.icon-pink { background: var(--accent-pink); }
-.icon-green { background: var(--accent-green); }
+.icon-yellow { background: var(--accent-warning); }
+.icon-green { background: var(--accent-success); }
+.icon-primary { background: var(--accent-primary); }
+.icon-secondary { background: var(--accent-secondary); }
 
 .mission-card h3 {
     font-size: 1.125rem;
@@ -641,15 +665,15 @@ section {
 }
 
 .problem-card:hover {
-    border-color: var(--accent-pink);
-    box-shadow: 0 0 20px rgba(236, 72, 153, 0.15);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.15);
 }
 
 .problem-number {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 2.5rem;
     font-weight: 800;
-    color: var(--accent-pink);
+    color: var(--accent-primary);
     margin-bottom: 16px;
 }
 
@@ -824,7 +848,7 @@ section {
 }
 
 .solution-featured {
-    border-color: var(--accent-cyan);
+    border-color: var(--accent-primary);
     box-shadow: var(--shadow-glow);
 }
 
@@ -833,7 +857,7 @@ section {
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--accent-cyan);
+    background: var(--accent-primary);
     color: white;
     font-size: 0.75rem;
     font-weight: 700;
@@ -842,7 +866,7 @@ section {
 }
 
 .solution-icon {
-    color: var(--accent-cyan);
+    color: var(--accent-secondary);
     margin-bottom: 20px;
 }
 
@@ -873,16 +897,8 @@ section {
     content: '✓';
     position: absolute;
     left: 0;
-    color: var(--accent-teal);
+    color: var(--accent-success);
     font-weight: 700;
-}
-
-.solution-price {
-    display: block;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-primary);
 }
 
 @media (max-width: 1024px) {
@@ -920,7 +936,7 @@ section {
 }
 
 .business-card h3 svg {
-    color: var(--accent-cyan);
+    color: var(--accent-secondary);
 }
 
 .business-card p {
@@ -1006,7 +1022,7 @@ section {
 .investor-card h3 {
     font-size: 1.125rem;
     margin-bottom: 16px;
-    color: var(--accent-cyan);
+    color: var(--accent-secondary);
 }
 
 .investor-card p {
@@ -1064,7 +1080,7 @@ section {
 .testimonial-stars {
     display: flex;
     gap: 4px;
-    color: var(--accent-yellow);
+    color: var(--accent-warning);
     margin-bottom: 16px;
 }
 
@@ -1202,32 +1218,6 @@ section {
 .cta-note {
     font-size: 0.8125rem;
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 32px;
-}
-
-.cta-trust {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding-top: 32px;
-}
-
-.cta-trust > span {
-    display: block;
-    font-size: 0.8125rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 16px;
-}
-
-.trust-logos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 32px;
-}
-
-.trust-logos span {
-    font-size: 1rem;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.8);
 }
 
 @media (max-width: 640px) {
@@ -1243,7 +1233,6 @@ section {
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 10px;
     }
-    .trust-logos { gap: 20px; }
 }
 
 /* ============================================
@@ -1295,8 +1284,8 @@ section {
 }
 
 .footer-social a:hover {
-    background: var(--accent-cyan);
-    border-color: var(--accent-cyan);
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
     color: white;
 }
 
@@ -1321,7 +1310,7 @@ section {
 }
 
 .footer-col a:hover {
-    color: var(--accent-cyan);
+    color: var(--accent-primary);
 }
 
 .footer-bottom {
@@ -1340,7 +1329,7 @@ section {
 }
 
 .footer-tagline { color: var(--text-muted); }
-.heart { color: var(--accent-pink); }
+.heart { color: var(--accent-primary); }
 
 @media (max-width: 1024px) {
     .footer-grid {
@@ -1374,7 +1363,7 @@ section {
     right: 24px;
     width: 44px;
     height: 44px;
-    background: var(--accent-cyan);
+    background: var(--accent-primary);
     color: white;
     border: none;
     border-radius: 50%;
@@ -1397,7 +1386,7 @@ section {
 }
 
 .scroll-top:hover {
-    background: #0891B2;
+    background: var(--accent-primary-hover);
     transform: translateY(-2px);
 }
 
