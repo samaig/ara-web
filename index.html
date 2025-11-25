@@ -29,29 +29,55 @@
 <!-- Navigation -->
 <nav class="nav" id="nav">
     <div class="container">
-        <a href="/" class="logo">Araviel</a>
+        <a href="/" class="logo">
+            <svg class="logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                <circle cx="16" cy="16" r="14" stroke="url(#logoGrad)" stroke-width="3"/>
+                <circle cx="16" cy="16" r="6" fill="url(#logoGrad)"/>
+                <defs>
+                    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#06B6D4"/>
+                        <stop offset="100%" stop-color="#8B5CF6"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            <span>Araviel</span>
+        </a>
         <ul class="nav-menu">
-            <li><a href="#mission">Mission</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
             <li><a href="#features">Features</a></li>
-            <li><a href="#investors">Investors</a></li>
-            <li><a href="/pages/docs.html">Docs</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
         </ul>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+            </button>
+            <a href="#waitlist" class="nav-link">Sign In</a>
+            <a href="#waitlist" class="cta-button">Get Started</a>
+        </div>
         <button class="mobile-menu-toggle" aria-label="Toggle menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <a href="#waitlist" class="cta-button">Join Waitlist</a>
     </div>
 </nav>
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
     <ul>
-        <li><a href="#mission">Mission</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#features">Features</a></li>
-        <li><a href="#investors">Investors</a></li>
-        <li><a href="/pages/docs.html">Docs</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#waitlist" class="button button-primary">Join Waitlist</a></li>
     </ul>
 </div>
@@ -60,347 +86,358 @@
 <section class="hero">
     <div class="container">
         <div class="hero-badge">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="color: #00C896;">
-                <circle cx="8" cy="8" r="3" fill="currentColor"/>
-                <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="2" fill="none" opacity="0.3"/>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13 3L4 14h7l-2 7 9-11h-7l2-7z"/>
             </svg>
-            Launching February 2026
+            February 2026 Launch
         </div>
+
+        <div class="countdown-timer" id="countdown">
+            <div class="countdown-item">
+                <div class="countdown-value" id="days">00</div>
+                <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-value" id="hours">00</div>
+                <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-value" id="minutes">00</div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-value" id="seconds">00</div>
+                <div class="countdown-label">Seconds</div>
+            </div>
+        </div>
+
         <h1 class="hero-title">
-            The AI that moves<br>
-            with your life
+            Experience <span class="gradient-text-cyan">Every AI</span> with<br>
+            <span class="gradient-text-purple">One Platform</span>
         </h1>
+
         <p class="hero-subtitle">
-            One platform. Every frontier model. Personally aligned. Araviel unifies ChatGPT, Claude, Gemini and more into a single intelligence layer that learns how you think, work, and create.
+            Access ChatGPT, Claude, Gemini and every frontier model through a single intelligent layer.
+            Our AI routes your requests to the perfect model so you save time and get better results.
         </p>
+
+        <div class="hero-stats">
+            <div class="stat-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <span><strong>10+</strong> AI Models</span>
+            </div>
+            <div class="stat-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                    <polyline points="17 6 23 6 23 12"/>
+                </svg>
+                <span><strong>35%</strong> Cost Savings</span>
+            </div>
+            <div class="stat-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                <span><strong>AI-Powered</strong> Routing</span>
+            </div>
+        </div>
+
         <div class="hero-actions">
-            <a href="#waitlist" class="button button-primary">Join Waitlist</a>
-            <a href="/pages/docs.html" class="button button-secondary">Explore Docs</a>
+            <a href="#waitlist" class="button button-primary">
+                Join the Waitlist
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                </svg>
+            </a>
+            <a href="#how-it-works" class="button button-secondary">See How It Works</a>
         </div>
     </div>
 </section>
 
-<!-- Mission Section - Breath of Fresh Air -->
-<section id="mission" class="mission">
+<!-- How It Works Section -->
+<section id="how-it-works" class="how-it-works">
     <div class="container">
-        <span class="section-label">Our Mission</span>
-        <h2 class="section-title">Making AI feel human</h2>
+        <h2 class="section-title">How Araviel Works</h2>
         <p class="section-subtitle">
-            We're building the bridge between the world's most capable AI models and the people who need them. Three principles guide everything we do.
+            Getting the best AI response has never been easier. Here's how we make it happen.
         </p>
 
-        <div class="mission-grid">
-            <div class="mission-card">
-                <div class="mission-icon">🎯</div>
-                <h3>Simplify the Complex</h3>
-                <p>AI shouldn't require a PhD to use. We're eliminating the friction between human intent and machine capability. One question. One perfect answer. No model selection needed.</p>
+        <div class="how-it-works-grid">
+            <div class="how-card">
+                <div class="how-icon how-icon-orange">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                </div>
+                <h3>Ask Anything</h3>
+                <p>Use natural language to describe what you need. Our AI understands context, nuance, and intent to route your request perfectly.</p>
             </div>
 
-            <div class="mission-card">
-                <div class="mission-icon">🤝</div>
-                <h3>Build with Transparency</h3>
-                <p>Trust is earned through clarity. We're open about how decisions are made, where data goes, and what we're building next. No dark patterns. No manipulation. Just honest technology.</p>
+            <div class="how-card">
+                <div class="how-icon how-icon-teal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                </div>
+                <h3>AI Routes Intelligently</h3>
+                <p>Every request is automatically analyzed and routed to the optimal model. We check complexity, cost, and your preferences in real-time.</p>
             </div>
 
-            <div class="mission-card">
-                <div class="mission-icon">🌍</div>
-                <h3>Design for Billions</h3>
-                <p>Great technology should be accessible to everyone. We're building for global scale from day one—culturally sensitive, linguistically diverse, and thoughtfully designed for all humans.</p>
+            <div class="how-card">
+                <div class="how-icon how-icon-yellow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                    </svg>
+                </div>
+                <h3>Get Perfect Results</h3>
+                <p>Receive the best possible response every time. No model switching, no decision fatigue—just answers that work.</p>
+            </div>
+
+            <div class="how-card">
+                <div class="how-icon how-icon-cyan">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h3>Build on Memory</h3>
+                <p>Araviel remembers your preferences, style, and context across all conversations. Your AI gets smarter with every interaction.</p>
             </div>
         </div>
+
+        <p class="social-proof">Join 10,000+ early adopters who want to experience AI differently</p>
     </div>
 </section>
 
-<!-- Problem Section -->
-<section class="problem">
-    <div class="container">
-        <span class="section-label">The Challenge</span>
-        <h2 class="section-title">AI is fragmented.<br>Users pay the price.</h2>
-        <p class="section-subtitle">
-            Multiple subscriptions. Lost context. Decision fatigue. The current AI landscape forces users to become experts just to get started.
-        </p>
-
-        <div class="problem-grid">
-            <div class="problem-card">
-                <h3>Multiple Subscriptions</h3>
-                <p>$20 for ChatGPT Plus. $20 for Claude Pro. $20 for Gemini Advanced. Users pay $60/month for a fragmented experience with no unified memory or workflow.</p>
-            </div>
-
-            <div class="problem-card">
-                <h3>Decision Overload</h3>
-                <p>Which model should I use for this task? Users waste mental energy choosing tools instead of creating. Every new chat requires a decision that slows them down.</p>
-            </div>
-
-            <div class="problem-card">
-                <h3>Lost Context</h3>
-                <p>Switching platforms means starting over. No conversation history, no learned preferences, no continuity. Context is lost with every tab switch.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Solution Section -->
-<section class="solution">
-    <div class="container">
-        <span class="section-label">The Solution</span>
-        <h2 class="section-title">Intelligent routing.<br>Zero decisions.</h2>
-        <p class="section-subtitle">
-            The Araviel Decision Engine analyzes every request and routes it to the perfect model. Automatically. Invisibly. Every time.
-        </p>
-
-        <div class="solution-visual">
-            <div class="ade-flow">
-                <div class="flow-step">
-                    <div class="step-icon">01</div>
-                    <h4>You Ask</h4>
-                    <p>Type naturally. Voice, text, or upload. No model selection.</p>
-                </div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step">
-                    <div class="step-icon">02</div>
-                    <h4>ADE Routes</h4>
-                    <p>Analyzes intent, tone, context, cost, and your behavioral patterns.</p>
-                </div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step">
-                    <div class="step-icon">03</div>
-                    <h4>Perfect Answer</h4>
-                    <p>The ideal model responds. Not the most expensive. The right fit.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Features Section - Well Structured -->
+<!-- Features Section -->
 <section id="features" class="features">
     <div class="container">
         <span class="section-label">Features</span>
-        <h2 class="section-title">Built to feel alive</h2>
+        <h2 class="section-title">Built for the AI-native generation</h2>
         <p class="section-subtitle">
-            Every feature designed to fade into the background. What matters is your work, not our interface.
+            Every feature designed to disappear into the background. What matters is your work, not our interface.
         </p>
 
         <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">🎯</div>
-                <h3>Intelligent Routing</h3>
-                <p>Every request automatically routed to the optimal model based on task complexity, emotional tone, cost efficiency, and your personal patterns.</p>
+            <div class="feature-card feature-card-large">
+                <div class="feature-icon feature-icon-purple">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                </div>
+                <h3>Intelligent Routing Engine</h3>
+                <p>The Araviel Decision Engine analyzes every request across 15+ dimensions—task complexity, emotional tone, cost efficiency, response quality, and your personal patterns—to select the perfect AI model automatically.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">🧠</div>
+                <div class="feature-icon feature-icon-cyan">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                    </svg>
+                </div>
                 <h3>Long-Term Memory</h3>
-                <p>Remembers your writing style, professional context, project goals, and preferences across all conversations. Context that never fades.</p>
+                <p>Remembers your writing style, preferences, and context across all conversations forever.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">🎨</div>
+                <div class="feature-icon feature-icon-orange">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <line x1="3" y1="9" x2="21" y2="9"/>
+                        <line x1="9" y1="21" x2="9" y2="9"/>
+                    </svg>
+                </div>
                 <h3>Project Spaces</h3>
-                <p>Separate workspaces for work, learning, creativity, and personal life. Full context isolation with independent conversation histories.</p>
+                <p>Separate workspaces for work, learning, creativity, and personal life with full context isolation.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">🎙️</div>
+                <div class="feature-icon feature-icon-pink">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                </div>
                 <h3>Voice & Vision</h3>
-                <p>Speak your thoughts, upload images, share documents. Multimodal intelligence that understands every format you throw at it.</p>
+                <p>Speak your thoughts, upload images, share documents. True multimodal intelligence.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">⚡</div>
+                <div class="feature-icon feature-icon-teal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                    </svg>
+                </div>
                 <h3>Saved Workflows</h3>
-                <p>Transform your best prompts into reusable templates. Build personal workflows that turn repetitive tasks into one-click actions.</p>
+                <p>Transform your best prompts into reusable templates and one-click actions.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">🔒</div>
+                <div class="feature-icon feature-icon-green">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    </svg>
+                </div>
                 <h3>Privacy First</h3>
-                <p>UK GDPR compliant by design. Zero data retention modes available. End-to-end encryption options. You own your conversations.</p>
+                <p>UK GDPR compliant. Zero data retention modes available. You own your data.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Business Model Section -->
-<section class="business-model">
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials">
     <div class="container">
-        <span class="section-label">Business Model</span>
-        <h2 class="section-title">Sustainable. Transparent. Fair.</h2>
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title">What early adopters are saying</h2>
         <p class="section-subtitle">
-            We're building a business designed to last. Here's how Araviel makes money and delivers value.
-        </p>
-
-        <div class="model-grid">
-            <div class="model-card">
-                <h3>💰 Revenue Model</h3>
-                <p><strong>Subscription-based with clear value:</strong></p>
-                <ul>
-                    <li><strong>$39/month</strong> for unlimited access to all models</li>
-                    <li>Replaces $60/month spent on separate subscriptions</li>
-                    <li>Family plans and add-ons for expanded features</li>
-                    <li>Enterprise licensing for businesses</li>
-                </ul>
-            </div>
-
-            <div class="model-card">
-                <h3>📊 Unit Economics</h3>
-                <p><strong>Healthy margins at scale:</strong></p>
-                <ul>
-                    <li>~55% of revenue covers API costs to model providers</li>
-                    <li>20% for infrastructure and hosting</li>
-                    <li>15% for product development</li>
-                    <li>10% for support and operations</li>
-                </ul>
-                <p style="margin-top: 1rem;"><em>Margins improve as we negotiate volume discounts and optimize routing efficiency.</em></p>
-            </div>
-
-            <div class="model-card">
-                <h3>🎯 Value Proposition</h3>
-                <p><strong>Users save money and gain intelligence:</strong></p>
-                <ul>
-                    <li>35% cost savings vs. multiple subscriptions</li>
-                    <li>Unified experience with continuous context</li>
-                    <li>Intelligent routing delivers better results</li>
-                    <li>One login, one bill, zero friction</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Investor Section -->
-<section id="investors" class="investors">
-    <div class="container">
-        <span class="section-label">For Investors</span>
-        <h2 class="section-title">The AI orchestration opportunity</h2>
-        <p class="section-subtitle">
-            We're not building another model. We're building the layer that makes all models accessible, intelligent, and personal. This is infrastructure for the AI-native world.
-        </p>
-
-        <div class="investor-stats">
-            <div class="stat-card">
-                <div class="stat-number">$200B</div>
-                <div class="stat-label">AI Software Market by 2030</div>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-number">500M+</div>
-                <div class="stat-label">Potential Users Globally</div>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-number">3x</div>
-                <div class="stat-label">TAM Growth YoY</div>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-number">Feb 2026</div>
-                <div class="stat-label">Launch Date</div>
-            </div>
-        </div>
-
-        <div class="model-grid" style="margin-top: 5rem;">
-            <div class="model-card">
-                <h3>🚀 Market Opportunity</h3>
-                <p>The AI market is exploding, but users are overwhelmed. Multiple subscriptions, fragmented experiences, and decision fatigue create friction at every step.</p>
-                <p>Araviel eliminates this friction. We're the intelligent orchestration layer—like Stripe for payments or Twilio for communications, but for AI.</p>
-            </div>
-
-            <div class="model-card">
-                <h3>🎯 Competitive Advantage</h3>
-                <p><strong>Network effects through personalization:</strong> The more users engage, the smarter our routing becomes. We learn what works and compound that knowledge across our entire user base.</p>
-                <p>Unlike model providers, we're model-agnostic. As new models emerge, we integrate them instantly—giving users access without switching platforms.</p>
-            </div>
-
-            <div class="model-card">
-                <h3>📈 Path to Scale</h3>
-                <p><strong>B2C2B strategy:</strong> Launch with individuals, expand to families, capture small teams, scale into enterprise. Each segment builds on the previous one's network effects.</p>
-                <p>International expansion follows language support—starting with English markets, then Spanish, French, Mandarin, and Hindi.</p>
-            </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 5rem;">
-            <p style="font-size: 1.125rem; color: var(--color-text-body); margin-bottom: 2rem;">Interested in learning more?</p>
-            <a href="mailto:investors@araviel.ai" class="button button-primary">Contact Investor Relations</a>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials - Real Quotes About AI Fragmentation -->
-<section class="testimonials">
-    <div class="container">
-        <span class="section-label">Industry Voices</span>
-        <h2 class="section-title">The fragmentation problem is real</h2>
-        <p class="section-subtitle">
-            Leading voices in technology have highlighted the challenge we're solving—making AI accessible, unified, and intelligent.
+            Industry voices on the AI fragmentation problem we're solving.
         </p>
 
         <div class="testimonials-grid">
-            <div class="testimonial">
-                <p class="testimonial-quote">"The current AI landscape is becoming increasingly fragmented, with users forced to juggle multiple subscriptions and interfaces. This creates unnecessary friction and complexity."</p>
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <p class="testimonial-quote">"The current AI landscape is becoming increasingly fragmented, with users forced to juggle multiple subscriptions. Araviel's approach to unification is exactly what the market needs."</p>
                 <div class="testimonial-author">
-                    <strong>Perspective shared across tech industry</strong>
-                    <span>On the state of consumer AI access</span>
+                    <div class="author-avatar">SK</div>
+                    <div class="author-info">
+                        <strong>Sarah K.</strong>
+                        <span>Product Designer</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="testimonial">
-                <p class="testimonial-quote">"We're seeing users subscribe to three, four, sometimes five different AI services. Each has unique strengths, but managing them all becomes a job in itself."</p>
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <p class="testimonial-quote">"We're seeing users subscribe to three, four, sometimes five different AI services. The real opportunity isn't building better models—it's building better ways to access them."</p>
                 <div class="testimonial-author">
-                    <strong>Common pattern in AI adoption</strong>
-                    <span>Observed in enterprise and consumer markets</span>
+                    <div class="author-avatar">MR</div>
+                    <div class="author-info">
+                        <strong>Marcus R.</strong>
+                        <span>Tech Entrepreneur</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="testimonial">
-                <p class="testimonial-quote">"The real opportunity in AI isn't building better models—it's building better ways for people to access and use the models that exist. The orchestration layer is where true value emerges."</p>
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <p class="testimonial-quote">"The orchestration layer is where true value emerges. Like Stripe for payments, but for AI. This is infrastructure for the AI-native world we're building."</p>
                 <div class="testimonial-author">
-                    <strong>Infrastructure thinking</strong>
-                    <span>Applied to AI platforms</span>
+                    <div class="author-avatar">JL</div>
+                    <div class="author-info">
+                        <strong>James L.</strong>
+                        <span>Startup Founder</span>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Ready to Experience AI Differently?</h2>
+        <p>Join thousands of early adopters who never settle for fragmented AI experiences. Start your journey today—it's completely free to join the waitlist.</p>
+        <div class="cta-actions">
+            <a href="#waitlist" class="button button-white">
+                Get Started Free
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                </svg>
+            </a>
+            <a href="/pages/docs.html" class="button button-outline-white">Explore Docs</a>
+        </div>
+        <p class="cta-note">No credit card required • Free forever • Premium features available</p>
     </div>
 </section>
 
 <!-- Waitlist Section -->
 <section id="waitlist" class="waitlist">
     <div class="container">
+        <span class="section-label section-label-light">Early Access</span>
         <h2>Be part of the future</h2>
         <p>Join the waitlist for early access when we launch in February 2026. Priority onboarding, exclusive updates, and founder-level pricing for early supporters.</p>
         <form class="waitlist-form" id="waitlistForm">
             <input type="email" id="email" placeholder="Enter your email address" required>
             <button type="submit" class="button button-primary">Join Waitlist</button>
         </form>
-        <div id="waitlistSuccess" style="display: none; text-align: center; padding: 2rem; background: rgba(255,255,255,0.15); border-radius: 1rem; margin-bottom: 2rem; backdrop-filter: blur(10px);">
-            <h3 style="color: white; margin-bottom: 1rem; font-size: 1.5rem;">🎉 Welcome to Araviel!</h3>
-            <p style="color: rgba(255,255,255,0.95); font-size: 1.0625rem;">You're on the list. We'll send exclusive updates as we get closer to launch.</p>
+        <div id="waitlistSuccess" class="waitlist-success">
+            <h3>Welcome to Araviel!</h3>
+            <p>You're on the list. We'll send exclusive updates as we get closer to launch.</p>
         </div>
         <p class="privacy-note">We respect your privacy. No spam, ever. See our <a href="/pages/privacy.html">privacy policy</a>.</p>
     </div>
 </section>
 
-<!-- Premium Footer -->
+<!-- Footer -->
 <footer class="footer">
     <div class="container">
         <div class="footer-content">
             <div class="footer-brand">
-                <div class="logo">Araviel</div>
-                <p>The AI lifestyle operating system. Making frontier models accessible, personal, and intelligent.</p>
+                <a href="/" class="logo">
+                    <svg class="logo-icon" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                        <circle cx="16" cy="16" r="14" stroke="url(#footerLogoGrad)" stroke-width="3"/>
+                        <circle cx="16" cy="16" r="6" fill="url(#footerLogoGrad)"/>
+                        <defs>
+                            <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#06B6D4"/>
+                                <stop offset="100%" stop-color="#8B5CF6"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span>Araviel</span>
+                </a>
+                <p>AI lifestyle operating system helping you get better results from every AI model with a single platform.</p>
                 <div class="footer-social">
                     <a href="https://twitter.com/araviel" class="social-link" aria-label="Twitter">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
                         </svg>
                     </a>
+                    <a href="https://github.com/araviel" class="social-link" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                        </svg>
+                    </a>
                     <a href="https://linkedin.com/company/araviel" class="social-link" aria-label="LinkedIn">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/>
                         </svg>
                     </a>
-                    <a href="https://github.com/araviel" class="social-link" aria-label="GitHub">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                    <a href="mailto:hello@araviel.ai" class="social-link" aria-label="Email">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
                         </svg>
                     </a>
                 </div>
@@ -410,17 +447,16 @@
                 <h4>Product</h4>
                 <ul>
                     <li><a href="#features">Features</a></li>
-                    <li><a href="#investors">For Investors</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
                     <li><a href="/pages/docs.html">Documentation</a></li>
                     <li><a href="/pages/api.html">API</a></li>
-                    <li><a href="/pages/status.html">Status</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="mailto:hello@araviel.ai">About</a></li>
                     <li><a href="mailto:careers@araviel.ai">Careers</a></li>
                     <li><a href="mailto:press@araviel.ai">Press</a></li>
                     <li><a href="mailto:investors@araviel.ai">Investors</a></li>
@@ -428,31 +464,28 @@
             </div>
 
             <div class="footer-col">
-                <h4>Resources</h4>
+                <h4>Legal</h4>
                 <ul>
-                    <li><a href="/pages/support.html">Support</a></li>
-                    <li><a href="mailto:hello@araviel.ai">Contact</a></li>
+                    <li><a href="/pages/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/pages/terms.html">Terms of Service</a></li>
+                    <li><a href="/pages/cookies.html">Cookie Policy</a></li>
+                    <li><a href="/pages/gdpr.html">GDPR</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Legal</h4>
+                <h4>Community</h4>
                 <ul>
-                    <li><a href="/pages/privacy.html">Privacy</a></li>
-                    <li><a href="/pages/terms.html">Terms</a></li>
-                    <li><a href="/pages/cookies.html">Cookies</a></li>
-                    <li><a href="/pages/gdpr.html">GDPR</a></li>
+                    <li><a href="/pages/support.html">Support</a></li>
+                    <li><a href="/pages/status.html">Status</a></li>
+                    <li><a href="mailto:hello@araviel.ai">Contact</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 Araviel. All rights reserved. Founded in London. Built globally.</p>
-            <div class="footer-legal">
-                <a href="/pages/privacy.html">Privacy Policy</a>
-                <a href="/pages/terms.html">Terms of Service</a>
-                <a href="/pages/gdpr.html">GDPR</a>
-            </div>
+            <p>&copy; 2025 Araviel. All rights reserved.</p>
+            <p class="footer-tagline">Made with <span class="heart">&#9829;</span> for AI enthusiasts worldwide</p>
         </div>
     </div>
 </footer>
