@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://araviel.ai/sitemap.xml
+Sitemap: https://araviel.com/sitemap.xml
 
 # Crawl-delay (optional, adjust based on server capacity)
 Crawl-delay: 1
