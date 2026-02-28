@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Reference - Araviel</title>
+    <title>API Reference - Araveil</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <style>
@@ -30,7 +30,7 @@
                     <path d="M20 5L35 15V25L20 35L5 25V15L20 5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                     <circle cx="20" cy="20" r="4" fill="currentColor"/>
                 </svg>
-                <span class="logo-text">Araviel</span>
+                <span class="logo-text">Araveil</span>
             </a>
             <div class="nav-links">
                 <a href="../index.html">Home</a>
@@ -45,7 +45,7 @@
         <div class="container">
             <div class="api-header">
                 <h1>API Reference</h1>
-                <p class="subtitle">Build AI-powered applications with Araviel's REST API</p>
+                <p class="subtitle">Build AI-powered applications with Araveil's REST API</p>
                 <p class="version">Version 1.0 | Updated November 2025</p>
             </div>
 
@@ -62,7 +62,7 @@
 
                     <h3>Get Your API Key</h3>
                     <ol>
-                        <li>Log in to your Araviel account</li>
+                        <li>Log in to your Araveil account</li>
                         <li>Navigate to Settings → API</li>
                         <li>Click "Generate New API Key"</li>
                         <li>Copy and securely store your key (it won't be shown again)</li>
@@ -71,7 +71,7 @@
 
                     <h3>Base URL</h3>
                     <div class="code-block">
-                        <pre><code>https://api.araviel.ai/v1</code></pre>
+                        <pre><code>https://api.araveil.ai/v1</code></pre>
                     </div>
 
                     <h3>Rate Limits</h3>
@@ -181,7 +181,7 @@ X-RateLimit-Reset: 1698765432</code></pre>
 
                     <h3>Example: cURL</h3>
                     <div class="code-block">
-                        <pre><code>curl https://api.araviel.ai/v1/chat/completions \
+                        <pre><code>curl https://api.araveil.ai/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -d '{
@@ -199,7 +199,7 @@ X-RateLimit-Reset: 1698765432</code></pre>
                         <pre><code>import requests
 
 api_key = "YOUR_API_KEY"
-url = "https://api.araviel.ai/v1/chat/completions"
+url = "https://api.araveil.ai/v1/chat/completions"
 
 headers = {
     "Authorization": f"Bearer {api_key}",
@@ -224,7 +224,7 @@ print(result["choices"][0]["message"]["content"])</code></pre>
                         <pre><code>const axios = require('axios');
 
 const apiKey = 'YOUR_API_KEY';
-const url = 'https://api.araviel.ai/v1/chat/completions';
+const url = 'https://api.araveil.ai/v1/chat/completions';
 
 const data = {
   messages: [
@@ -287,7 +287,7 @@ axios.post(url, data, {
 
                     <h3>Example: cURL</h3>
                     <div class="code-block">
-                        <pre><code>curl https://api.araviel.ai/v1/models \
+                        <pre><code>curl https://api.araveil.ai/v1/models \
   -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
                     </div>
                 </section>
@@ -476,7 +476,7 @@ data: [DONE]</code></pre>
 import json
 
 response = requests.post(
-    "https://api.araviel.ai/v1/chat/completions",
+    "https://api.araveil.ai/v1/chat/completions",
     headers={"Authorization": f"Bearer {api_key}"},
     json={"messages": [{"role": "user", "content": "Hello"}], "stream": True},
     stream=True
@@ -581,12 +581,12 @@ for line in response.iter_lines():
 
                     <h3>Python SDK</h3>
                     <div class="code-block">
-                        <pre><code>pip install araviel</code></pre>
+                        <pre><code>pip install araveil</code></pre>
                     </div>
                     <div class="code-block">
-                        <pre><code>from araviel import Araviel
+                        <pre><code>from araveil import Araveil
 
-client = Araviel(api_key="YOUR_API_KEY")
+client = Araveil(api_key="YOUR_API_KEY")
 
 response = client.chat.completions.create(
     messages=[
@@ -599,12 +599,12 @@ print(response.choices[0].message.content)</code></pre>
 
                     <h3>JavaScript SDK</h3>
                     <div class="code-block">
-                        <pre><code>npm install @araviel/sdk</code></pre>
+                        <pre><code>npm install @araveil/sdk</code></pre>
                     </div>
                     <div class="code-block">
-                        <pre><code>import Araviel from '@araviel/sdk';
+                        <pre><code>import Araveil from '@araveil/sdk';
 
-const client = new Araviel({ apiKey: 'YOUR_API_KEY' });
+const client = new Araveil({ apiKey: 'YOUR_API_KEY' });
 
 const response = await client.chat.completions.create({
   messages: [{ role: 'user', content: 'Hello, world!' }]
@@ -615,9 +615,9 @@ console.log(response.choices[0].message.content);</code></pre>
 
                     <h3>Community SDKs</h3>
                     <ul>
-                        <li><strong>Ruby:</strong> <code>gem install araviel-ruby</code></li>
-                        <li><strong>Go:</strong> <code>go get github.com/araviel/araviel-go</code></li>
-                        <li><strong>PHP:</strong> <code>composer require araviel/araviel-php</code></li>
+                        <li><strong>Ruby:</strong> <code>gem install araveil-ruby</code></li>
+                        <li><strong>Go:</strong> <code>go get github.com/araveil/araveil-go</code></li>
+                        <li><strong>PHP:</strong> <code>composer require araveil/araveil-php</code></li>
                     </ul>
                 </section>
 
@@ -627,7 +627,7 @@ console.log(response.choices[0].message.content);</code></pre>
                     <ul>
                         <li><strong>Documentation:</strong> <a href="docs.html">Full documentation</a></li>
                         <li><strong>Support:</strong> <a href="support.html">Contact support</a></li>
-                        <li><strong>Email:</strong> <a href="mailto:api@araviel.ai">api@araviel.ai</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:api@araveil.ai">api@araveil.ai</a></li>
                         <li><strong>Status:</strong> <a href="status.html">API status page</a></li>
                     </ul>
                 </section>
@@ -637,7 +637,7 @@ console.log(response.choices[0].message.content);</code></pre>
 
     <footer class="legal-footer">
         <div class="container">
-            <p>&copy; 2025 Araviel. All rights reserved. | <a href="../index.html">Home</a> | <a href="docs.html">Docs</a> | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a></p>
+            <p>&copy; 2025 Araveil. All rights reserved. | <a href="../index.html">Home</a> | <a href="docs.html">Docs</a> | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a></p>
         </div>
     </footer>
 </body>
